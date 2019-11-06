@@ -2,5 +2,24 @@ extends layout
 
 block content
     include navbar.pug
-                    
+
+    section#section-carousel
+        #carousel.carousel.slide.carousel-fade(data-ride="carousel", data-pause="false")
+            .carousel-inner
+                .carousel-item.active 
+                    img(src="images/carousel/carousel-1.jpg" class="d-block w-100" alt="our_hotel")
+                .carousel-item          
+                    img(src="images/carousel/carousel-2.jpg" class="d-block w-100" alt="our_hote2")
+                .carousel-item          
+                    img(src="images/carousel/carousel-3.jpg" class="d-block w-100" alt="our_hote3")
+    
+    section#about-us
+        .container
+            h2.text-center.pt-2 ¿Quiénes somos?
+            p.text-justify.mt-3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, maiores, voluptas quasi tempore ratione, non repudiandae vel consequatur est nobis quis. At vero, magni quidem repellat ea aliquid repellendus temporibus quaerat libero voluptas quas! Cum ex expedita a, neque temporibus perferendis ut! Deserunt quidem, ipsum reiciendis voluptatum velit ut rerum.
+            
+    
+
+                
+
 
