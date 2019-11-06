@@ -1,0 +1,16 @@
+/*Custom Fonts*/
+
+@font-face {
+    font-family: Futura-Round;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round.ttf)
+}
+
+@font-face {
+    font-family: Futura-Round-Bold;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Cond\ Bold.ttf)
+}
+
+@font-face {
+    font-family: Futura-Bold_Oblique;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Bold\ Oblique.ttf)
+}

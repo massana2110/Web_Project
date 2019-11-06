@@ -7,18 +7,62 @@ block content
         #carousel.carousel.slide.carousel-fade(data-ride="carousel", data-pause="false")
             .carousel-inner
                 .carousel-item.active 
-                    img(src="images/carousel/carousel-1.jpg" class="d-block w-100" alt="our_hotel")
+                    img(src="images/carousel/hotel_carousel.jpeg", class="d-block w-100", alt="our_hotel")
                 .carousel-item          
-                    img(src="images/carousel/carousel-2.jpg" class="d-block w-100" alt="our_hote2")
+                    img(src="images/carousel/carousel-2.jpg", class="d-block w-100", alt="our_hote2")
                 .carousel-item          
-                    img(src="images/carousel/carousel-3.jpg" class="d-block w-100" alt="our_hote3")
-    
+                    img(src="images/carousel/carousel-3.jpg", class="d-block w-100", alt="our_hote3")
+    //Seccion de acerca de nosotros
     section#about-us
         .container
-            h2.text-center.pt-2 ¿Quiénes somos?
+            h2.text-center.pt-2 
+                span.borde.borde1 ¿Quiénes 
+                span.borde.borde2 somos?
             p.text-justify.mt-3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, maiores, voluptas quasi tempore ratione, non repudiandae vel consequatur est nobis quis. At vero, magni quidem repellat ea aliquid repellendus temporibus quaerat libero voluptas quas! Cum ex expedita a, neque temporibus perferendis ut! Deserunt quidem, ipsum reiciendis voluptatum velit ut rerum.
-            
-    
+    //Seccion de las instalaciones        
+    section#instalaciones
+        .container
+            .row
+                .col.text-center.text-uppercase.mt-3
+                    h2 Nuestro hogar
+            .row
+                .col-12.col-md-6.col-lg-4.mb-4
+                    .card   
+                        img(src="/images/hotel_rooms/habitaciones.jpg", class="card-img-top", alt="Habitaciones")
+                        .card-body
+                            h5.card-title.mb-0 Habitaciones
+                            p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit mollitia error doloribus. Assumenda ipsa unde rerum iure, optio laborum rem error debitis necessitatibus odio maxime. Quaerat reiciendis est inventore modi.
+                .col-12.col-md-6.col-lg-4.mb-4
+                    .card
+                        img(src="/images/hotel_restaurant/restaurante.jpg", class="card-img-top", alt="Restaurantes")
+                        .card-body.card-color
+                            h5.card-title.mb-0 Restaurantes
+                            p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, impedit velit doloremque fugit, sequi minima aperiam repellat repudiandae quibusdam quasi consequatur assumenda at, tenetur adipisci minus cum soluta unde accusantium!
+                .col-12.col-md-6.offset-md-3.col-lg-4.offset-lg-0.mb-4
+                    .card
+                        img(src="/images/hotel_pool/piscina.jpg", class="card-img-top", alt="Piscinas")
+                        .card-body
+                            h5.card-title.mb-0 Piscinas
+                            p.card-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorum nisi ipsum et temporibus fuga asperiores, sapiente ab minima adipisci velit rem officiis quam illo rerum praesentium voluptates! Eius, similique!
+    //Seccion de Paquetes
+    section#paquetes
+        .container
+            .row
+                .col.text-center.text-uppercase.mt-3.mb-3
+                    h2 Visitanos
+            .row
+                .col-12.col-md-6.col-lg-4.mb-3
+                    .card
+                        h3.card-header.text-center.text-uppercase Un sueño
+                        .card-body
+                            h4.card-title.text-center $100.00
+                            p.card-text.text.uppercase Incluye
+                            p.card-text - Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium?
+                            p.card-text - Lorem ipsum dolor sit, amet consectetur adipisicing.
+                            p.card-text - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, assumenda ad ipsa itaque quae recusandae.
+
+
+
 
                 
 
