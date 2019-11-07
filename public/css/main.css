@@ -67,3 +67,28 @@
 #paquetes .container .row .col h2 {
     color: #ffffff;
 }
+
+.action {
+    background-image: url("../images/see-you.jpg");
+    height: 80vh;
+    object-fit: cover;
+}
+.paralax-background {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#social-media {
+    background-color: #00012f;
+}
+
+#social-media span{
+    color: #ffffff;
+}
+
+#footer{
+    background-color: #010125;
+    color: #ffffff;
+}
