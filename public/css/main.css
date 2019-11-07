@@ -4,6 +4,23 @@
     margin: 0;
     padding: 0;
 }
+#header img {
+    width: 60px;
+}
+#header .container #navbar .navbar-nav .nav-item .nav-link {
+    font-family: Futura-Round;
+}
+#header .container #navbar .btn-group .btn {
+    font-family: Futura-Round;
+}
+
+#header .container #navbar .btn-group .btn-primary {
+    color: #fff;
+}
+
+#header .container #navbar .btn-group .btn-outline-primary:hover {
+    color: #fff;
+}
 
 #section-carousel .carousel-inner img {
     max-height: 95vh;
