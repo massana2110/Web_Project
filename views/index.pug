@@ -5,13 +5,26 @@ block content
 
     section#section-carousel
         #carousel.carousel.slide.carousel-fade(data-ride="carousel", data-pause="false")
-            .carousel-inner
-                .carousel-item.active 
-                    img(src="images/carousel/hotel_carousel.jpeg", class="d-block w-100", alt="our_hotel")
+            ol.carousel-indicators
+                li(data-target="#carousel", data-slide-to="0", class="active")
+                li(data-target="#carousel", data-slide-to="1", class="active")
+                li(data-target="#carousel", data-slide-to="2", class="active")
+            .carousel-inner(role="listbox")
+                .carousel-item.active
+                    img(src="images/carousel/hotel_carousel.jpeg", class="d-block w-100", alt="our-hotel1")
+                    .carousel-caption.text-center
+                        h1 Bienvenido a Asteria
+                        h3 ¡Vive la experiencia!
                 .carousel-item          
-                    img(src="images/carousel/carousel-2.jpg", class="d-block w-100", alt="our_hote2")
+                    img(src="images/carousel/hotel_view.jpg", class="d-block w-100", alt="our_hote2")
                 .carousel-item          
                     img(src="images/carousel/carousel-3.jpg", class="d-block w-100", alt="our_hote3")
+            a.carousel-control-prev(href="#carousel", role="button", data-slide="prev")
+                span.carousel-control-prev-icon(aria-hidden="true") 
+                span.sr-only Anterior
+            a.carousel-control-next(href="#carousel", role="button", data-slide="next")
+                span.carousel-control-next-icon(ariaa-hidden="true")
+                span.sr-only Siguiente
     //Seccion de acerca de nosotros
     section#about-us
         .container
@@ -90,7 +103,7 @@ block content
                     i(class="fas fa-map-marker-alt")
                     span  Carretera al litoral Km. 84 Acajutla, Sonsonate, El Salvador <br>
                     i(class="far fa-envelope")
-                    span  example_hotel@gmail.com <br>
+                    span  asteria_hotel@gmail.com <br>
                     i(class="fas fa-phone-volume")
                     span  Tel. 2567-6789 <br>
                     a(href="#")
