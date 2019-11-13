@@ -9,18 +9,20 @@ body {
     overflow-x: hidden;
 }
 
+/* ----- NAVBAR ------*/
 .navbar {
     text-transform: uppercase;
     font-size: .9rem;
     letter-spacing: .1rem;
-    background-color: rgba(0,0,0,.6) !important;
+    background-color: #00012f !important;
 }
+
 .navbar .navbar-brand img {
     height: 2rem;
 }
 
 #header .container #navbar .navbar-nav .nav-item {
-    padding-right: .7rem;
+    padding-right: .5rem;
 }
 
 #header .container #navbar .navbar-nav .nav-item .nav-link {
@@ -45,11 +47,57 @@ body {
     color: #fff;
 }
 
+/* ------ CAROUSEL --------*/
 #section-carousel .carousel-inner img {
-    max-height: 100vh;
+    max-height: 90vh;
     object-fit: cover;
 }
 
+#section-carousel #carousel .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    top: 38%;
+    font-family: Lemon_Milk;
+    text-transform: uppercase;
+    width: 100%;
+    right: 0;   
+    left: 0;
+}
+
+#section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    padding-bottom: 1rem;
+}
+
+#section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h2 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-family: Lemon_Milk;
+    color: #1d3461
+}
+
+#section-carousel #carousel .carousel-inner .carousel-item:nth-child(even) .carousel-caption h3 {
+    font-size: 2rem;
+    padding-bottom: 1.6rem;
+    font-family: Lemon_Milk;
+    text-transform: uppercase;
+    color: #010125
+}
+
+#section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h4 {
+    font-size: 3.8rem;
+    color: #00012f;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+/* ----- ABOUT US ------*/
 #about-us {
     background-color: #010125;
     color: #ffffff;
@@ -57,7 +105,9 @@ body {
 }
 
 #about-us .borde  {
-    font-family: Futura-Round-Bold;
+    font-family: Lemon_Milk;
+    font-size: .8em;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0 auto;
 }
@@ -77,9 +127,15 @@ body {
     border-right: 4px solid #CF8A01;
     border-top: 4px solid #CF8A01;
 }
+#about-us p {
+    font-family: Futura-Round;
+    font-size: 1.2em;
+}
 
+/* ----- INSTALACIONES ------*/
 #instalaciones h2{
-    font-family: Futura-Round-Bold;
+    font-family: Lemon_Milk;
+    font-size: 1.8em;
     letter-spacing: 2px;
     color: #00012f;
 }
@@ -95,40 +151,216 @@ body {
     color: #ffffff;
 }
 
+#instalaciones .card .card-body .card-title {
+    font-family: Lemon_Milk;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
 #instalaciones .card .card-body.card-color{
     background-color: #CF8A01;
     color: #000000;
 }
 
+/* ----- PAQUETES ------*/
 #paquetes {
     background-color: #00012f;
 }
 
 #paquetes .container .row .col h2 {
     color: #ffffff;
+    font-family: Lemon_Milk;
+}
+#paquetes .container .row .card {
+    border: none;
 }
 
+#paquetes .container .row .card .card-header{
+    background-color: #CF8A01;
+    font-family: Lemon_Milk;
+    color: #fff;
+    font-size: 1.5em;
+    padding: 0.6em 0;
+}
+
+#paquetes .container .row .card .card-body .card-title {
+    font-family: Lemon_Milk;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 0.35em;
+}
+
+#paquetes .container .row .card .card-body p{
+    font-family: Futura-Round;
+    text-align: justify;
+}
+
+#paquetes .container .row .card .card-body p:nth-child(2){
+    font-family: Lemon_Milk;
+    font-size: 1.2em;
+}
+
+/* ----- SEE YOU SECTION -----*/
 .action {
     background-image: url("../images/see-you.jpg");
-    height: 80vh;
+    height: 100vh;
     object-fit: cover;
 }
-.paralax-background {
-    background-attachment: fixed;
+
+.background {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+#see_you .container-fluid {
+    display: flex !important;
+    flex-flow: column wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+#see_you h2 {
+    font-family: Lemon_Milk;
+    color: #00012f;
+    font-size: 6.5rem;
+}
+
+/* ------ SOCIAL MEDIA ------*/
 #social-media {
     background-color: #00012f;
 }
 
-#social-media span{
-    color: #ffffff;
+#social-media .img-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
+#social-media img {
+    width: 150px;
+}
+
+#social-media .info-container > i:nth-child(1) {
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+#social-media .info-container .content > i {
+    font-size: 1.5em;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#social-media .info-container .content{
+    margin: 1em 0;
+}
+
+#social-media .info-container .content .social-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 0 10px 0 0;
+    border-radius: 28%;
+    border: 1px solid #fff;
+}
+
+#social-media .info-container .content .social-btn a {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+}
+
+#social-media .info-container .content .social-btn .fab.fa-facebook-f,
+#social-media .info-container .content .social-btn .fab.fa-instagram,
+#social-media .info-container .content .social-btn .fab.fa-twitter {
+    color: #fff;
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin: 7px auto;
+}
+
+#social-media .info-container .content .social-btn.facebook i:hover, 
+#social-media .info-container .content .social-btn.facebook:hover{
+    color: #fff;
+    background-color: #3B5998;
+}
+
+#social-media .info-container .content .social-btn.insta:hover, 
+#social-media .info-container .content .social-btn.insta i:hover {
+    color: #fff;
+    background-color: #F26798;
+}
+
+#social-media .info-container .content .social-btn.twitter:hover, 
+#social-media .info-container .content .social-btn.twitter i:hover{
+    color: #fff;
+    background-color: #00ACEE;
+}
+
+#social-media .info-container .text {
+    color: #fff;
+}
+
+#social-media .container .row .col-12.col-md-6 h4{
+    font-family: Lemon_Milk;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+}
+
+#social-media .container .row .col-12.col-md-6 form label {
+    font-family: Futura-Round;
+    color: #fff;
+    text-transform: uppercase;
+}
+/* ---- FOOTER ----- */
 #footer{
     background-color: #010125;
     color: #ffffff;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 767px) {
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h1 {
+        font-size: 2.3rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h2 {
+        font-size: 2.3rem;
+        letter-spacing: .15rem;
+    }
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+    #section-carousel #carousel .carousel-inner .carousel-item:nth-child(even) .carousel-caption h3 {
+        font-size: 1.2rem;
+        padding-bottom: 1.6rem;
+        
+    }
+    #see_you h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h1 {
+        font-size: 1.5rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h3 {
+        font-size: .7rem;
+        padding-bottom: .7rem;
+    }
+    #see_you h2 {
+        font-size: 2.5rem;
+    }
 }
