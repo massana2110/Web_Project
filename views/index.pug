@@ -16,9 +16,14 @@ block content
                         h1 Bienvenido a Asteria
                         h3 ¡Vive la experiencia!
                 .carousel-item          
-                    img(src="images/carousel/hotel_view.jpg", class="d-block w-100", alt="our_hote2")
+                    img(src="images/hotel_rooms/hotel_bedroom.jpeg", class="d-block w-100", alt="our_hote2")
+                    .carousel-caption.text-center
+                        h2 Vive un sueño
+                        h3 En nuestras modernas instalaciones
                 .carousel-item          
-                    img(src="images/carousel/carousel-3.jpg", class="d-block w-100", alt="our_hote3")
+                    img(src="images/carousel/hotel_view.jpg", class="d-block w-100", alt="our_hote3")
+                    .carousel-caption.text-center
+                        h4.text-center Haz tu reserva ¡ya! 
             a.carousel-control-prev(href="#carousel", role="button", data-slide="prev")
                 span.carousel-control-prev-icon(aria-hidden="true") 
                 span.sr-only Anterior
@@ -31,12 +36,12 @@ block content
             h2.text-center.pt-2 
                 span.borde.borde1 ¿Quiénes 
                 span.borde.borde2 somos?
-            p.text-justify.mt-4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, maiores, voluptas quasi tempore ratione, non repudiandae vel consequatur est nobis quis. At vero, magni quidem repellat ea aliquid repellendus temporibus quaerat libero voluptas quas! Cum ex expedita a, neque temporibus perferendis ut! Deserunt quidem, ipsum reiciendis voluptatum velit ut rerum.
+            p.text-justify.mt-4.pt-2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, maiores, voluptas quasi tempore ratione, non repudiandae vel consequatur est nobis quis. At vero, magni quidem repellat ea aliquid repellendus temporibus quaerat libero voluptas quas! Cum ex expedita a, neque temporibus perferendis ut! Deserunt quidem, ipsum reiciendis voluptatum velit ut rerum.
     //Seccion de las instalaciones        
     section#instalaciones
         .container
             .row
-                .col.text-center.text-uppercase.mt-3
+                .col.text-center.text-uppercase.mt-4.mb-3
                     h2 Nuestro hogar
             .row
                 .col-12.col-md-6.col-lg-4.mb-4
@@ -60,16 +65,16 @@ block content
     //Seccion de Paquetes
     section#paquetes
         .container
-            .row
+            .row.pt-2
                 .col.text-center.text-uppercase.mt-3.mb-3
                     h2 Visitanos
-            .row
+            .row.pb-4
                 .col-12.col-md-6.col-lg-4.mb-3
                     .card
                         h3.card-header.text-center.text-uppercase Un sueño
                         .card-body
                             h4.card-title.text-center $100.00
-                            p.card-text.text.uppercase Incluye
+                            p.card-text.text-uppercase Incluye
                             p.card-text - Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium?
                             p.card-text - Lorem ipsum dolor sit, amet consectetur adipisicing.
                             p.card-text - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, assumenda ad ipsa itaque quae recusandae.
@@ -84,7 +89,7 @@ block content
                             p.card-text - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quam.
                 .col-12.col-md-6.offset-md-3.col-lg-4.offset-lg-0.mb-3
                     .card
-                        h3.card-header.text-center.text-uppercase Un sueño
+                        h3.card-header.text-center.text-uppercase El cielo en la tierra
                         .card-body
                             h4.card-title.text-center $350.00
                             p.card-text.text-uppercase Incluye
@@ -93,26 +98,37 @@ block content
                             p.card-text - Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum voluptatum mollitia.
     //Seccion Te Esperamos
     section#see_you
-        .container-fluid.action.paralax-background
-            h2.text-uppercase ¡te esperamos!
+        .container-fluid.action.background
+            h2.text-uppercase.text-center ¡te esperamos!
     //Seccion social media
-    section#social-media
+    section#social-media.pb-4
         .container
             .row
                 .col-12.col-md-6.mt-4
-                    i(class="fas fa-map-marker-alt")
-                    span  Carretera al litoral Km. 84 Acajutla, Sonsonate, El Salvador <br>
-                    i(class="far fa-envelope")
-                    span  asteria_hotel@gmail.com <br>
-                    i(class="fas fa-phone-volume")
-                    span  Tel. 2567-6789 <br>
-                    a(href="#")
-                        i(class="fab fa-facebook-square")
-                    a(href="#")
-                        i(class="fab fa-instagram")
-                    a(href="#")
-                        i(class="fab fa-twitter-square")
-                    span  Asteria Hotel & Resort
+                    .img-container 
+                        img(src="images/logo-02.png") 
+                    <br>
+                    .info-container 
+                        .content
+                            i(class="fas fa-map-marker-alt")  
+                            span.text  Carretera al litoral Km. 84 Acajutla, Sonsonate, El Salvador <br>
+                        .content
+                            i(class="far fa-envelope")
+                            span.text  asteria.hotel2019@gmail.com <br>
+                        .content 
+                            i(class="fas fa-phone-volume")
+                            span.text  Tel. 2567-6789 <br>
+                        .content
+                            span.social-btn.facebook 
+                                a(href="#")
+                                    i(class="fab fa-facebook-f")
+                            span.social-btn.insta
+                                a(href="#")
+                                    i(class="fab fa-instagram")
+                            span.social-btn.twitter
+                                a(href="https://twitter.com/asteria96764173", target="_blank")
+                                    i(class="fab fa-twitter")
+                            span.text  Asteria Hotel & Resort
                 .col-12.col-md-6.mt-4
                     h4.text-center.text-uppercase Contáctanos
                     form
@@ -125,6 +141,7 @@ block content
                         .form-group
                             label(for="message") Mensaje
                             textarea(name="mensaje", rows="3", class="form-control", placeholder="Tu mensaje")
+                        button(type="submit", class="btn btn-danger btn-lg btn-block") Enviar
     //Footer
     footer#footer
         .container.pt-3.pb-2
