@@ -1,0 +1,21 @@
+extends layout
+
+block content
+ include navbar.pug
+ body 
+  h1#reservation-header ¡Haz tu reservación ya!
+  section#reservartion-form
+   h2 ¡Empecemos!
+   p Ingrese sus nombres y apellidos.
+   input(type="text")#input-firstnames
+   input(type="text")#input-lastnames 
+   p Ingrese su numero de telefono.
+   input(type="tel")#input-phone
+   p Ingrese su e-mail.
+   input(type="email")#input-email
+   p Indique la fecha de llegada y salida de su reserva.
+   input(type="date")#arrive-date
+   input(type="date")#exit-date
+   p Confirme sus datos.
+   input(type="checkbox")#confirmation-checkbox 
+   input(type="submit")#submit-form

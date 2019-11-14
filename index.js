@@ -7,6 +7,7 @@ const path = require('path');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users')
+const reservationRouter = require('./routes/add_reservation');
 
 var app = express(); 
 
@@ -22,9 +23,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter )
+app.use('/reservaciones', reservationRouter);
 
 app.get('/', function (req, res) {
-  	res.render("index")
+	  res.render("index")
+});
+
+app.get('/reservaciones', function (req, res) {
+	res.render("add_reservation")
 });
 
 app.get('/users/login', function (req,res){
