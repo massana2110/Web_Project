@@ -1,14 +1,32 @@
-extends layout
+extends layouts/layout_signup
 
 block content
     .container-fluid
         .row.justify-content-center
             .col-sm-6.col-md-4
+                h1 Registrate
+                h2 ¡Vive la experiencia!
                 form(action="#")
                     .form-group
-                        label(for="name") Nombre
+                        label(for="email") Correo Electronico
                         input(
-                            type="text"
+                            type="email"
                             class="form-control"
-                            placeholder="David"
+                            placeholder="example@gmail.com"
                         )
+                        label(for="pass") Contraseña
+                        input(
+                            type="password"
+                            class="form-control"
+                            placeholder="Contraseña"
+                        )
+                        label(for="verify") Confirmar contraseña
+                        input(
+                            type="password"
+                            class="form-control"
+                            placeholder="Confirmar contraseña"
+                        )
+                        button(
+                            type: "submit"
+                            class="btn btn-primary"
+                        ) Registrarme

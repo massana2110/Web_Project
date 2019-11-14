@@ -25,23 +25,23 @@ app.use(express.static(path.join(__dirname, 'public')));
  * Routes
  */
 app.use('/', indexRouter);
-app.use('/users', usersRouter )
+app.use('/users', usersRouter );
 app.use('/reservaciones', reservationRouter);
 
 app.get('/', function (req, res) {
-	  res.render("index")
+	res.render("index")
 });
 
 app.get('/reservaciones', function (req, res) {
-	res.render("add_reservation")
+  res.render("add_reservation")
 });
 
 app.get('/users/signup', function(req,res){
-	res.render("signup")
+  res.render("signup")
 })
 
 app.get('/users/login', function (req,res){
-	res.render("login")
+  res.render("login")
 })
 
 //Listening the server
