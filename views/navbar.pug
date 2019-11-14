@@ -1,6 +1,6 @@
 nav#header.navbar.navbar-expand-lg.navbar-dark.bg-dark
     .container
-        a(class="navbar-brand", href="#") 
+        a(class="navbar-brand", href="/") 
             img(src="images/logo-02.png", alt="Asteria Logo") 
             span Asteria Hotel
         button(
@@ -25,5 +25,7 @@ nav#header.navbar.navbar-expand-lg.navbar-dark.bg-dark
                 li.nav-item
                     a.nav-link(href="#") ¡Haz tu reserva!
             form.form-inline.my-2.mr-md-0
-                button.btn.btn-outline-light.mr-2(type="button") Iniciar Sesión
-                button.btn.btn-light.my-2.my-sm-1(type="button") Registrate
+                a(href="/users/login")
+                    button.btn.btn-outline-light.mr-2(type="button") Iniciar Sesión
+                a(href="/users/signup")    
+                    button.btn.btn-light.my-2.my-sm-1(type="button") Registrate
