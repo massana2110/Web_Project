@@ -9,6 +9,31 @@ body {
     overflow-x: hidden;
 }
 
-h1{
-    
+#reservation-header{
+    font-size: 2em;
+    font-family: Lemon_Milk;
+    text-align: center;
+}
+
+h2{ 
+  text-align: center;
+}
+
+#reservation-form{
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input{
+    border-radius: 2px;
+    padding:0.2em;
+    margin: 0.2em;
+    border-color: black;
+}
+
+label{
+    font-size: 1.2em;
+    text-align: justify;
 }
