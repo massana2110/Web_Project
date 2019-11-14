@@ -1,0 +1,12 @@
+@import url(fonts.css);
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Futura-Round;
+    background-image: url("../images/loginbackground.jpg") !important;
+    background-repeat: no-repeat center center;
+}
