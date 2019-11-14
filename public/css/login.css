@@ -8,5 +8,21 @@
 body{
     font-family: Futura-Round;
     background-image: url("../images/loginbackground.jpg") !important;
-    background-repeat: no-repeat center center;
+    background-repeat: no-repeat center center !important;
+    background-size: cover;
+}
+
+.container-fluid{
+    margin: 0 auto;
+    margin-top: 150px;
+    padding: 0;
+
+}
+
+
+.col-sm-6.col-md-4{
+    background-color:rgba(140, 82, 48, 0.1);
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 20px;
 }
