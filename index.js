@@ -6,7 +6,7 @@ const http = require('http');
 const path = require('path');
 
 const indexRouter = require('./routes/index');
-//const reservationRouter = require('./routes/add_reservation');
+const reservationRouter = require('./routes/add_reservation');
 
 var app = express(); 
 
@@ -21,11 +21,14 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-//app.use('/', reservationRouter);
+app.use('/reservaciones', reservationRouter);
 
 app.get('/', function (req, res) {
 	  res.render("index")
-	  res.render("add_reservation")
+});
+
+app.get('/reservaciones', function (req, res) {
+	res.render("add_reservation")
 });
 
 //Listening the server
