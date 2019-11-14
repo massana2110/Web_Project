@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+                h1.text-center.pt-2 login
+                form
+                    .form-group
+                        label(for="email") Email:
+                        input(type="email",id="email", name="email" placeholder="Correo Electronico")
+                    .form-group
+                        label(for="password") Contraseña:
+                        input(type="password", id="password", name="password", placeholder="Contraseña" )
+                    button.btn.btn-primary(type="submit") Log In
+
+                

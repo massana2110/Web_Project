@@ -6,6 +6,7 @@ const http = require('http');
 const path = require('path');
 
 const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users')
 
 var app = express(); 
 
@@ -20,10 +21,15 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/users', usersRouter )
 
 app.get('/', function (req, res) {
   	res.render("index")
 });
+
+app.get('/users/login', function (req,res){
+	res.render("login")
+})
 
 //Listening the server
 http.createServer(app).listen(app.get("port"), function () {
