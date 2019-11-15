@@ -307,21 +307,50 @@ body {
         padding-bottom: 1.6rem;
         
     }
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h4 {
+        font-size: 2.5rem;
+        padding-bottom: 1.2rem;
+    }
+
     #see_you h2 {
         font-size: 3.5rem;
+    }
+    #instalaciones .card .card-img-top{
+        width: 100%;
+        height: 25vh;
+        object-fit: cover;
     }
 }
 
 @media (max-width: 575px) {
     #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h1 {
+        font-size: 1.3rem;
+        letter-spacing: .15rem;
+        padding-bottom: .8rem;
+    }
+
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h2 {
         font-size: 1.5rem;
         letter-spacing: .15rem;
+        padding-bottom: .8rem;
+    }
+
+    #section-carousel #carousel .carousel-inner .carousel-item:nth-child(even) .carousel-caption h3 {
+        font-size: .8rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h4 {
+        font-size: 1.5rem;
         padding-bottom: .5rem;
     }
-    #section-carousel #carousel .carousel-inner .carousel-item .carousel-caption h3 {
-        font-size: .7rem;
-        padding-bottom: .7rem;
+
+    #about-us .borde  {
+        font-size: .5em;
+        letter-spacing: 2px;
+        margin: 0 auto;
     }
+
     #see_you h2 {
         font-size: 2.5rem;
     }

@@ -1,32 +1,38 @@
 extends layouts/layout_signup
 
 block content
-    .container-fluid
-        .row.justify-content-center
-            .col-sm-6.col-md-4
-                h1 Registrate
-                h2 ¡Vive la experiencia!
-                form(action="#")
-                    .form-group
-                        label(for="email") Correo Electronico
-                        input(
-                            type="email"
-                            class="form-control"
-                            placeholder="example@gmail.com"
-                        )
-                        label(for="pass") Contraseña
-                        input(
-                            type="password"
-                            class="form-control"
-                            placeholder="Contraseña"
-                        )
-                        label(for="verify") Confirmar contraseña
-                        input(
-                            type="password"
-                            class="form-control"
-                            placeholder="Confirmar contraseña"
-                        )
+
+    .container-fluid.bg
+        .row
+            .col-12.col-sm-4.col-md-4
+            .col-12.col-sm-4.col-md-4
+                .form-container
+                    h1.text-center Registrate
+                    h2.text-center ¡Vive la experiencia!
+                    form(action="#")
+                        .form-group
+                            label(for="email") Correo Electronico
+                            input(
+                                type="email"
+                                class="form-control"
+                                placeholder="example@gmail.com"
+                            )
+                        .form-group    
+                            label(for="pass") Contraseña
+                            input(
+                                type="password"
+                                class="form-control"
+                                placeholder="Contraseña"
+                            )
+                        .form-group    
+                            label(for="verify") Confirmar contraseña
+                            input(
+                                type="password"
+                                class="form-control"
+                                placeholder="Confirmar contraseña"
+                            )
                         button(
                             type: "submit"
-                            class="btn btn-primary"
+                            class="btn btn-primary btn-block"
                         ) Registrarme
+            .col-12.col-sm-4.col-md-4        

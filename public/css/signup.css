@@ -1,0 +1,24 @@
+@import url(fonts.css);
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-image: url(../images/beach_background_signup.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-container{
+    padding: 30px 40px;
+    margin-top: 20vh;
+    box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+}
+
+.form-container img {
+    width: 80px;
+    height: 80px;
+}
