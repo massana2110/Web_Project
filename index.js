@@ -10,7 +10,7 @@ const usersRouter = require('./routes/users')
 const reservationRouter = require('./routes/add_reservation');
 
 var app = express(); 
-
+require('./config/database');
 /**
  * Settings
  */
