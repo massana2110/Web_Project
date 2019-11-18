@@ -2,7 +2,7 @@
 
 *, ::before, ::after {
     margin: 0;
-    padding: 0;
+    padding: 2px 2px;
 }
 
 body{
@@ -15,14 +15,34 @@ body{
 .container-fluid{
     margin: 0 auto;
     margin-top: 150px;
-    padding: 0;
-
+    padding: 0px;
 }
-
-
+.form-group-1{
+    margin-bottom: 0.5em;
+}
 .col-sm-6.col-md-4{
-    background-color:rgba(140, 82, 48, 0.1);
+    background-color:rgb(255, 255, 255);
     margin: 0 auto;
     padding: 0;
-    padding-bottom: 20px;
+    padding-bottom: 1px;
+}
+img {
+    display: block;
+    width: 125px;
+    height: 100px;
+}
+
+.btn{
+    margin-top: 1em;
+}
+
+form{
+    border: 1px solid #000000;
+    padding: 30px 40px;
+    margin-top: 10vh;
+    box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+}
+
+p{
+    margin-bottom: 1px;
 }
