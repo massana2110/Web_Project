@@ -56,14 +56,15 @@ h2{
 label{
     margin-top: 0.5em;
     font-size: 1em;
-    font-family: Futura-Round;
+    font-family: Futura-Demi;
     text-align: justify;
 }
 
 #submit-btn{
     background-color: rgb(57, 105, 240);
     color: whitesmoke;
-    font-family: Futura-Round;
+    border-color: rgb(57,105, 240);
+    font-family: Futura-Demi;
 }
 
 .btn:hover{

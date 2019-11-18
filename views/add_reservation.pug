@@ -8,24 +8,24 @@ block content
   label(for="text") Ingrese sus nombres y apellidos:
   br
   div#input-names
-   input(type="text", placeholder="Nombres", class="form-control")
-   input(type="text", placeholder="Apellidos", class="form-control") 
+   input(type="text", placeholder="Nombres", class="form-control" required)
+   input(type="text", placeholder="Apellidos", class="form-control" required) 
   br
   div#input-tel
    label(for="tel") Ingrese su numero de telefono:
    br
-   input(type="tel", placeholder="2567-6789", class="form-control")
+   input(type="tel", placeholder="2567-6789", class="form-control" required)
   br
   div#input-email
    label(for="email") Ingrese su e-mail:
    br
-   input(type="email", placeholder="email@gmail.com", class="form-control")
+   input(type="email", placeholder="email@gmail.com", class="form-control" required)
   br
   label(for="date") Indique la fecha de llegada y salida de su reserva.
   br
   div#input-dates
-   input(type="date", class="form-control")#arrive-date
-   input(type="date", class="form-control")#exit-date
+   input(type="date", class="form-control" required)#arrive-date
+   input(type="date", class="form-control" required)#exit-date
   br
   div#confirmation 
-   button(type: submit, class="form-control btn")#submit-btn Confirmar reserva.
+   button(type: submit, class="form-control btn")#submit-btn Confirmar reserva
