@@ -1,29 +1,29 @@
 extends layouts/layout_reservation
 
 block content
- include navbar.pug
- section#reservation-form
-  h1#reservation-header ¡Haz tu reservación ya!
-  h2 ¡Empecemos!
-  label(for="text") Ingrese sus nombres y apellidos:
-  br
-  input(type="text", placeholder="Nombres")#input-firstnames
-  input(type="text", placeholder="Apellidos")#input-lastnames  
-  br
-  label(for="tel") Ingrese su numero de telefono:
-  br
-  input(type="tel", placeholder="2567-6789")#input-phone
-  br
-  label(for="email") Ingrese su e-mail:
-  br
-  input(type="email", placeholder="email@gmail.com")#input-email
-  br
-  label(for="date") Indique la fecha de llegada y salida de su reserva.
-  br
-  input(type="date")#arrive-date
-  input(type="date")#exit-date
-  br
-  label(for="checkbox") Confirme sus datos.
-  br
-  input(type="checkbox")#confirmation-checkbox 
-  input(type="submit")#submit-form
+    include navbar.pug
+    section#reservation-form
+        h1#reservation-header ¡Haz tu reservación ya!
+        h2 ¡Empecemos!
+        label(for="text") Ingrese sus nombres y apellidos:
+        br
+        input(type="text" placeholder="Nombres")#input-firstnames
+        input(type="text" placeholder="Apellidos")#input-lastnames  
+        br
+        label(for="tel") Ingrese su numero de telefono:
+        br
+        input(type="tel" placeholder="2567-6789")#input-phone
+        br
+        label(for="email") Ingrese su e-mail:
+        br
+        input(type="email" placeholder="email@gmail.com")#input-email
+        br
+        label(for="date") Indique la fecha de llegada y salida de su reserva.
+        br
+        input(type="date")#arrive-date
+        input(type="date")#exit-date
+        br
+        label(for="checkbox") Confirme sus datos.
+        br
+        input(type="checkbox")#confirmation-checkbox 
+        input(type="submit")#submit-form
