@@ -7,23 +7,25 @@ block content
   h2 ¡Empecemos!
   label(for="text") Ingrese sus nombres y apellidos:
   br
-  input(type="text", placeholder="Nombres")#input-firstnames
-  input(type="text", placeholder="Apellidos")#input-lastnames  
+  div#input-names
+   input(type="text", placeholder="Nombres", class="form-control")
+   input(type="text", placeholder="Apellidos", class="form-control") 
   br
-  label(for="tel") Ingrese su numero de telefono:
+  div#input-tel
+   label(for="tel") Ingrese su numero de telefono:
+   br
+   input(type="tel", placeholder="2567-6789", class="form-control")
   br
-  input(type="tel", placeholder="2567-6789")#input-phone
-  br
-  label(for="email") Ingrese su e-mail:
-  br
-  input(type="email", placeholder="email@gmail.com")#input-email
+  div#input-email
+   label(for="email") Ingrese su e-mail:
+   br
+   input(type="email", placeholder="email@gmail.com", class="form-control")
   br
   label(for="date") Indique la fecha de llegada y salida de su reserva.
   br
-  input(type="date")#arrive-date
-  input(type="date")#exit-date
+  div#input-dates
+   input(type="date", class="form-control")#arrive-date
+   input(type="date", class="form-control")#exit-date
   br
-  label(for="checkbox") Confirme sus datos.
-  br
-  input(type="checkbox")#confirmation-checkbox 
-  input(type="submit")#submit-form
+  div#confirmation 
+   button(type: submit, class="form-control btn")#submit-btn Confirmar reserva.
