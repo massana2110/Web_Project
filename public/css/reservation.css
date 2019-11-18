@@ -9,6 +9,16 @@ body {
     overflow-x: hidden;
 }
 
+#form-container{
+   padding: 2em;
+   margin: 0em 60px;
+
+   display: flex;
+
+   flex-direction: column;
+   justify-items: center; 
+}
+
 #reservation-header{
     font-size: 2em;
     font-family: Lemon_Milk;
@@ -18,15 +28,6 @@ body {
 h2{ 
   text-align: center;
   margin-bottom: 1em;
-}
-
-#reservation-form{
-  margin: 2em 25em;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
 }
 
 .form-control{
@@ -41,6 +42,7 @@ h2{
     display: flex;
 
     flex-flow: row nowrap;
+    justify-items: center;
 }
 
 #input-dates{
@@ -71,3 +73,24 @@ label{
     opacity: 0.9;
     text-decoration: none;
 }
+
+@media screen and (max-width: 767px){
+    
+    .form-container {
+       width: 100%;
+       height: auto;
+    }
+
+    #input-names{
+        display: flex;
+    
+        flex-flow: row wrap;
+    }
+    
+    #input-dates{
+     display: flex;
+    
+     flex-flow: row wrap;
+    }
+
+   }

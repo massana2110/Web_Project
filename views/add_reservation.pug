@@ -2,7 +2,7 @@ extends layouts/layout_reservation
 
 block content
  include navbar.pug
- section#reservation-form
+ section#form-container
   h1#reservation-header ¡Haz tu reservación ya!
   h2 ¡Empecemos!
   label(for="text") Ingrese sus nombres y apellidos:
@@ -11,14 +11,14 @@ block content
    input(type="text", placeholder="Nombres", class="form-control" required)
    input(type="text", placeholder="Apellidos", class="form-control" required) 
   br
+  label(for="tel") Ingrese su numero de telefono:
+  br
   div#input-tel
-   label(for="tel") Ingrese su numero de telefono:
-   br
    input(type="tel", placeholder="2567-6789", class="form-control" required)
   br
+  label(for="email") Ingrese su e-mail:
+  br
   div#input-email
-   label(for="email") Ingrese su e-mail:
-   br
    input(type="email", placeholder="email@gmail.com", class="form-control" required)
   br
   label(for="date") Indique la fecha de llegada y salida de su reserva.
