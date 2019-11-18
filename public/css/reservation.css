@@ -17,23 +17,57 @@ body {
 
 h2{ 
   text-align: center;
+  margin-bottom: 1em;
 }
 
 #reservation-form{
-  margin: 2em;
+  margin: 2em 25em;
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+
 }
 
-input{
-    border-radius: 2px;
+.form-control{
+    border-radius: 0.25rem;
+    border: 1px solid black;
     padding:0.2em;
     margin: 0.2em;
     border-color: black;
 }
 
+#input-names{
+    display: flex;
+
+    flex-flow: row nowrap;
+}
+
+#input-dates{
+ display: flex;
+
+ flex-flow: row nowrap;
+}
+
+#confirmation{
+ margin-top: 1em;
+}
+
 label{
-    font-size: 1.2em;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-family: Futura-Demi;
     text-align: justify;
+}
+
+#submit-btn{
+    background-color: rgb(57, 105, 240);
+    color: whitesmoke;
+    border-color: rgb(57,105, 240);
+    font-family: Futura-Demi;
+}
+
+.btn:hover{
+    opacity: 0.9;
+    text-decoration: none;
 }
