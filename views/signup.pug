@@ -9,6 +9,8 @@ block content
                     h1.text-center Registrate
                     h2.text-center ¡Vive la experiencia!
                     img(src="../images/logo.png" class="mx-auto mb-3")
+                    include partials/messages.pug
+                    include partials/errors_alerts.pug
                     form(action="/users/signup", method="POST")
                         .form-row
                             .form-group.col-md-6
