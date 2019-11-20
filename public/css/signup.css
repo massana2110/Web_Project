@@ -6,7 +6,7 @@
 }
 
 .bg {
-    background-image: url(../images/beacgith_background_signup.jpg);
+    background-image: url(../images/beach-dawn-iphone-wallpaper-189349.jpg);
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
@@ -46,7 +46,7 @@
 @media screen and (max-width: 767px){
     
     .bg {
-        background-image: url(../images/background02-signup.jpg);
+        background-image: url(../images/beach-dawn-iphone-wallpaper-189349.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         height: auto;
