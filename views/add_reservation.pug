@@ -15,10 +15,10 @@ block content
      input(type="text", placeholder="Nombres", class="form-control" name="firstname" required)
      input(type="text", placeholder="Apellidos", class="form-control" name="lastname" required) 
     br
-    label(for="tel") Ingrese su numero de telefono:
+    label(for="phone") Ingrese su numero de telefono:
     br
     div#input-tel
-     input(type="tel", placeholder="2567-6789", class="form-control" name="telephone" required)
+     input(type="phone", placeholder="2567-6789", class="form-control" name="phone" required)
     br
     label(for="email") Ingrese su e-mail:
     br
@@ -28,12 +28,12 @@ block content
     label(for="date") Indique la fecha de llegada y salida de su reserva.
     br
     div#input-dates
-     input(type="date", class="form-control" name="arrive_date" required)
-     input(type="date", class="form-control" name="departure_date" required)
+     input(type="date", class="form-control" name="arrive_date" min="2019-11-22" max="2019-12-31" required)#arrival-date
+     input(type="date", class="form-control" name="departure_date" min="2019-11-22" max="2019-12-31" required)#departure-date
     br
     label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
     div#select-room
-     select(name="chosen_room" class="form-control" size required)
+     select(name="room" class="form-control" size required)
       option(value="A1") A1
       option(value="A2") A2
       option(value="A3") A3
@@ -47,7 +47,7 @@ block content
       option(value="B2") B2
     label(for="choose-package") Escoja un paquete para su reserva.
     div#select-package
-     select(name="chosen_package", class="form-control" required)
+     select(name="package", class="form-control" required)
       option(value="un-sueño") Paquete "Un sueño" 
       option(value="el-cielo") Paquete "Prueba el cielo"
       option(value="el-cielo-tierra") Paquete "Prueba el cielo en la tierra"
