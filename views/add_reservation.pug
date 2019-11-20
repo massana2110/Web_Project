@@ -7,27 +7,49 @@ block content
  section#form-container
   h1#reservation-header ¡Haz tu reservación ya!
   h2 ¡Empecemos!
-  label(for="text") Ingrese sus nombres y apellidos:
-  br
-  div#input-names
-   input(type="text", placeholder="Nombres", class="form-control" required)
-   input(type="text", placeholder="Apellidos", class="form-control" required) 
-  br
-  label(for="tel") Ingrese su numero de telefono:
-  br
-  div#input-tel
-   input(type="tel", placeholder="2567-6789", class="form-control" required)
-  br
-  label(for="email") Ingrese su e-mail:
-  br
-  div#input-email
-   input(type="email", placeholder="email@gmail.com", class="form-control" required)
-  br
-  label(for="date") Indique la fecha de llegada y salida de su reserva.
-  br
-  div#input-dates
-   input(type="date", class="form-control" required)#arrive-date
-   input(type="date", class="form-control" required)#exit-date
-  br
-  div#confirmation 
-   button(type: submit, class="form-control btn")#submit-btn Confirmar reserva
+  div.card.container-card
+   label(for="text") Ingrese sus nombres y apellidos:
+   br
+   form(action="/reservaciones/nueva-reservacion" method="POST")
+    div#input-names
+     input(type="text", placeholder="Nombres", class="form-control" name="firstname" required)
+     input(type="text", placeholder="Apellidos", class="form-control" name="lastname" required) 
+    br
+    label(for="tel") Ingrese su numero de telefono:
+    br
+    div#input-tel
+     input(type="tel", placeholder="2567-6789", class="form-control" name="telephone" required)
+    br
+    label(for="email") Ingrese su e-mail:
+    br
+    div#input-email
+     input(type="email", placeholder="email@gmail.com", class="form-control" name="email" required)
+    br
+    label(for="date") Indique la fecha de llegada y salida de su reserva.
+    br
+    div#input-dates
+     input(type="date", class="form-control" name="arrive-date" required)
+     input(type="date", class="form-control" name="departure-date" required)
+    br
+    label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
+    div#select-room
+     select(name="chosen-room" class="form-control" size required)
+      option(value="A1") A1
+      option(value="A2") A2
+      option(value="A3") A3
+      option(value="A4") A4
+      option(value="A5") A5
+      option(value="A6") A6
+      option(value="A7") A7
+      option(value="A8") A8
+      option(value="A9") A9
+      option(value="A10") A10
+      option(value="B2") B2
+    label(for="choose-package") Escoja un paquete para su reserva.
+    div#select-package
+     select(name="chosen-package", class="form-control" required)
+      option(value="un-sueño") Paquete "Un sueño" 
+      option(value="el-cielo") Paquete "Prueba el cielo"
+      option(value="el-cielo-tierra") Paquete "Prueba el cielo en la tierra"
+    div#confirmation 
+     button(type: submit, class="form-control btn btn-primary ")#submit-btn Confirmar reserva
