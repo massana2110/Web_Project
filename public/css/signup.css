@@ -6,7 +6,7 @@
 }
 
 .bg {
-    background-image: url(../images/beach-dawn-iphone-wallpaper-189349.jpg);
+    background-image: url(../images/beach_background_signup.jpg);
     background-repeat: no-repeat;
     width: 100%;
     height: auto;
@@ -37,10 +37,6 @@
     font-family: Futura-Round-Bold;
     font-size: 1.3em;
     text-transform: uppercase;
-}
-
-.form-container img {
-
 }
 
 .form-container form label {

@@ -3,22 +3,24 @@ extends layouts/layout_login
 block content
     .container-fluid
         .row.justify-content-center
-            .col-sm-6.col-md-4
-                //h1.text-center.pt-2 Ingresar
-                img(src="../images/logo.png" class="mx-auto mb-3")
-                include partials/messages.pug
-                include partials/errors_alerts.pug
-                form
-                    .form-group-1
-                        label(for="email") Email:
-                        input(type="email",id="email", class="form-control", name="email" placeholder="Correo Electronico")
-                    .form-group-2
-                        label(for="password") Contraseña:
-                        input(type="password", id="password", class="form-control" name="password", placeholder="Contraseña" )
-                    a(href="#") ¿Olvidaste tu contraseña? <br>
-                    button.btn.btn-primary.btn-block(type="submit") Iniciar Sesión
-                    <br>
-                    p  ¿No tienes cuenta con nosotros? 
-                    a(href="/users/signup") Registrate acá. 
+            .col-sm-12.col-md-8.col-xl-4
+                .form-container 
+                    h1.text-center.pt-2 Ingresar
+                    img(src="../images/logo.png" class="mx-auto mb-3")
+                    include partials/messages.pug
+                    include partials/errors_alerts.pug
+                    form
+                        .form-group
+                            label(for="email") Email:
+                            input(type="email",id="email", class="form-control", name="email" placeholder="Correo Electronico")
+                        .form-group
+                            label(for="password") Contraseña:
+                            input(type="password", id="password", class="form-control" name="password", placeholder="Contraseña" )
+                        a(href="#") ¿Olvidaste tu contraseña? <br>
+                        button.btn.btn-primary.btn-block(type="submit") Iniciar Sesión
+                        <br>
+                    p.text-center ¿No tienes cuenta con nosotros? 
+                    span.d-flex.justify-content-center
+                        a(href="/users/signup") Registrate acá. 
 
                 
