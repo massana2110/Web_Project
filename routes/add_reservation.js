@@ -6,4 +6,9 @@ router.get('/reservaciones', (req,res,next) =>{
     res.render('add_reservation', { title: 'Reservacion' });
 })
 
+router.post('/reservaciones/nueva-reservacion',(req,res)=>{
+    console.log(req.body)
+    res.send('Recibido')
+})
+
 module.exports = router;
