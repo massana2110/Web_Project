@@ -11,9 +11,8 @@ router.get('/reservaciones', (req,res,next) =>{
 router.post('/reservaciones/nueva-reservacion',async (req,res)=>{
     const {firstname , lastname, phone, email, arrive_date, departure_date, room, package} = req.body;
     const errors = [];
-    var startDate = new Date($('#departuredate').val());
-    var endDate = new Date($('#arrivaldate').val());
-    if(endDate <= startDate){
+    
+    if(arrive_date <= departure_date){
         errors.push({text: 'La fecha de salida no puede ser menor a la de arribo'})
     }
     if(errors.length > 0){
