@@ -10,6 +10,11 @@ router.get('/users/login', (req,res) => {
     res.render('login', { title: 'Iniciar sesion' });
 })
 
+router.post('/users/login', passport.authenticate('local',{
+    successRedirect: '/perfil',
+    failureRedirect: '/users/login',
+    failureFlash: true
+}));
 /**
  * Get Sign up page
  */
@@ -27,7 +32,8 @@ router.post('/users/signup', async (req, res) => {
         errors.push({ text: 'Contraseña debe contener al menos 8 caracteres '});
     }
     if(errors.length > 0){
-        console.log(errors);
+    //font-family: Futura-Demi;
+    console.log(errors);
         res.render('signup', {title: 'Registro', errors, name, lastname, age, phone, email, password, verify })
     } else {
         const emailUser = await User.findOne({email: email});

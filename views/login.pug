@@ -8,7 +8,7 @@ block content
                 img(src="../images/logo.png" class="mx-auto mb-3")
                 include partials/messages.pug
                 include partials/errors_alerts.pug
-                form
+                form(action ="/users/login" method="POST")
                     .form-group-1
                         label(for="email") Email:
                         input(type="email",id="email", class="form-control", name="email" placeholder="Correo Electronico")

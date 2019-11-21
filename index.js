@@ -7,9 +7,12 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
-
+const passport = require('passport')
 const app = express(); 
+
+
 require('./config/database');
+require('./config/passport');
 
 /**
  * Settings
@@ -31,6 +34,8 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true
 }));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(flash());
 
 /**
