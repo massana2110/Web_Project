@@ -51,4 +51,19 @@ router.post('/users/signup', async (req, res) => {
     }
 })
 
+/**
+ * Get profile page
+ */
+
+
+
+  router.get('/perfil',isAuthenticated,(req, res) => {
+    res.render('profile', { title: 'Perfil' });
+  });
+  function isAuthenticated(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect('/users/login');
+    };
 module.exports = router;
