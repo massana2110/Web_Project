@@ -24,12 +24,11 @@ router.post('/reservaciones/nueva-reservacion',async (req,res)=>{
     }
     if(errors.length > 0){
         res.render('add_reservation', {errors, phone, email, arrive_date,
-             departure_date, room, package})
+             departure_date})
     }else{
         const newReservation = new Reservation({firstname, lastname, phone, email,
         arrive_date,departure_date,room,package});
         await newReservation.save();
-        res.send('Recibido')
     }
 })
 
