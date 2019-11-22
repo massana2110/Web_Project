@@ -12,7 +12,7 @@ router.post('/reservaciones/nueva-reservacion',async (req,res)=>{
     const {firstname , lastname, phone, email, arrive_date, departure_date, room, package} = req.body;
     const errors = [];
     const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-    const phoneRegexp = /^\d{8}-\d{1}$/;
+    const phoneRegexp = /^\d{4}-\d{4}$/;
     if(phoneRegexp.test(phone) != true){
         errors.push({text: "Nùmero de telefono incorrecto."})
     }
@@ -29,6 +29,7 @@ router.post('/reservaciones/nueva-reservacion',async (req,res)=>{
         const newReservation = new Reservation({firstname, lastname, phone, email,
         arrive_date,departure_date,room,package});
         await newReservation.save();
+        res.send('recibido');
     }
 })
 
