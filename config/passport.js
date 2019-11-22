@@ -19,12 +19,12 @@ passport.use(new localStrategy({
 }));
 
 passport.serializeUser((user, done) => {
-    done(null, user, id);
+    done(null, user);
 });
 
 passport.deserializeUser((id, done) => {
     User.findById(id, (err, user) => {
-        done(err, user);
+        done(err, user.id);
     });
 
 });
