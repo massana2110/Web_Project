@@ -8,14 +8,13 @@ block content
                     h1.text-center.pt-2 Ingresar
                     img(src="../images/logo.png" class="mx-auto mb-3")
                     include partials/messages.pug
-                    include partials/errors_alerts.pug
                     form(action = '/users/login' method='POST')
                         .form-group
                             label(for="email") Email:
-                            input(type="email",id="email", class="form-control", name="email" placeholder="Correo Electronico")
+                            input(type="email",id="email", class="form-control", name="email" placeholder="Correo Electronico", required)
                         .form-group
                             label(for="password") Contraseña:
-                            input(type="password", id="password", class="form-control" name="password", placeholder="Contraseña" )
+                            input(type="password", id="password", class="form-control" name="password", placeholder="Contraseña", required)
                         a(href="#") ¿Olvidaste tu contraseña? <br>
                         button.btn.btn-primary.btn-block(type="submit") Iniciar Sesión
                         <br>
