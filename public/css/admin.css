@@ -1,0 +1,13 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard h1 {
+    font-family: Lemon_Milk;
+}
+
+.dashboard .row .card .card-body .icon-container i{
+    font-size: 3.5em;
+}

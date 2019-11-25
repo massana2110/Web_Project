@@ -1,0 +1,48 @@
+extends layouts/layout_admin
+
+block content
+    include navbar.pug
+
+    main.dashboard
+        .container
+            h1.text-center.mt-4 Administrar mi Hotel.
+            .row.mt-4
+                h2 Estadisticas
+            .row
+                .col-12.col-md-6.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="fas fa-users")
+                                .col-7.col-md-8
+                                    .user-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Usuarios Registrados
+                                        p.card-title.text-right 20
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.
+                .col-12.col-md-6.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="far fa-calendar-alt")
+                                .col-7.col-md-8
+                                    .reservation-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Reservas Hechas.
+                                        p.card-title.text-right 10
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.
+
+                                    
+
+
+
