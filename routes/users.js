@@ -59,16 +59,22 @@ router.get('/logout', (req,res,next) =>{
 /**
  * Get profile page
  */
-
-router.get('/perfil', isAuthenticated, (req, res) => {
-    res.render('profile', { title: 'Perfil' });
-});
-
 function isAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
     }
     res.redirect('/users/login');
 };
+
+router.get('/perfil', isAuthenticated, (req, res) => {
+    res.render('profile', { title: 'Perfil' });
+});
+
+/**
+ * Get Admin Page
+ */
+router.get('/admin', isAuthenticated, (req, res) =>{
+    res.render('admin', {title: 'Administracion'});
+})
 
 module.exports = router;

@@ -17,11 +17,11 @@ nav#header.navbar.navbar-expand-lg.navbar-dark.bg-dark
         #navbar(class="collapse navbar-collapse")
             ul.navbar-nav.mr-auto.mt-2.mt-lg-0
                 li.nav-item.active
-                    a.nav-link(href="#about-us") ¿Quiénes somos?
+                    a.nav-link(href="/#about-us") ¿Quiénes somos?
                 li.nav-item
-                    a.nav-link(href="#instalaciones") Instalaciones
+                    a.nav-link(href="/#instalaciones") Instalaciones
                 li.nav-item
-                    a.nav-link(href="#paquetes") Paquetes
+                    a.nav-link(href="/#paquetes") Paquetes
                 li.nav-item
                     a.nav-link(href="/reservaciones") ¡Haz tu reserva!
             if !user
@@ -38,4 +38,6 @@ nav#header.navbar.navbar-expand-lg.navbar-dark.bg-dark
                                 strong=user.name
                             .dropdown-menu(aria-labelledby="navbarDropdown")
                                 a.dropdown-item(href="/perfil") Perfil
+                                if user.name === 'superAdmin'
+                                    a.dropdown-item(href="/admin") Administrar Hotel
                                 a.dropdown-item(href="/logout") Cerrar Sesión
