@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Reservation = require('../models/Reservation');
+const User = require('../models/User');
 
 /*GET home page */
 router.get('/reservaciones', (req,res,next) =>{
@@ -8,8 +9,8 @@ router.get('/reservaciones', (req,res,next) =>{
 })
 
 
-router.post('/reservaciones/nueva-reservacion',async (req,res)=>{
-    const {firstname , lastname, phone, email, arrive_date, departure_date, room, package} = req.body;
+router.post('/reservaciones',async (req,res,next)=>{
+    const {phone, email, arrive_date, departure_date, room, package} = req.body;
     const errors = [];
     const emailRegexp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
     const phoneRegexp = /^\d{4}-\d{4}$/;
@@ -26,11 +27,13 @@ router.post('/reservaciones/nueva-reservacion',async (req,res)=>{
         res.render('add_reservation', {errors, phone, email, arrive_date,
              departure_date})
     }else{
-        const newReservation = new Reservation({firstname, lastname, phone, email,
-        arrive_date,departure_date,room,package});
+        const newReservation = new Reservation({phone, email, arrive_date,departure_date,room,package});
+        newReservation.user = req.user.id;
         await newReservation.save();
-        res.send('recibido');
-    }
+        req.flash('success_msg', '¡Reservación añadida con exito! Puede ver sus reservas en la pestaña de su perfil.')
+        res.redirect('/reservaciones');
+    } 
+
 })
 
 module.exports = router;
