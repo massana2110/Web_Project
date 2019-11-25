@@ -24,8 +24,18 @@ nav#header.navbar.navbar-expand-lg.navbar-dark.bg-dark
                     a.nav-link(href="#paquetes") Paquetes
                 li.nav-item
                     a.nav-link(href="/reservaciones") ¡Haz tu reserva!
-            form.form-inline.my-2.mr-md-0
-                a(href="/users/login")
-                    button.btn.btn-outline-light.mr-2(type="button") Iniciar Sesión
-                a(href="/users/signup")    
-                    button.btn.btn-light.my-2.my-sm-1(type="button") Registrate
+            if !user
+                form.form-inline.my-2.mr-md-0
+                    a(href="/users/login")
+                        button.btn.btn-outline-light.mr-2(type="button") Iniciar Sesión
+                    a(href="/users/signup")    
+                        button.btn.btn-light.my-2.my-sm-1(type="button") Registrate
+            else
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown.my-2.mr-md-0
+                            a.nav-link.dropdown-toggle(href="#", id="navbarDropdown", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                i(class="fas fa-user mr-1") 
+                                strong=user.name
+                            .dropdown-menu(aria-labelledby="navbarDropdown")
+                                a.dropdown-item(href="/perfil") Perfil
+                                a.dropdown-item(href="/logout") Cerrar Sesión
