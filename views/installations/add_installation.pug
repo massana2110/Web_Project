@@ -1,0 +1,24 @@
+extends ../layouts/layout_installations 
+
+block content
+    include navbar.pug
+
+    section#installations
+        .container
+            .row
+                .col-md-6
+                    .card.h-100
+                        h3.card-header.text-center Pisos
+                        .card-body
+                            form(action="#")
+                                .form-group
+                                    input(
+                                        type= "text"
+                                        maxlength= "1"
+                                        class="form-control"
+                                        placeholder="Correlativo"
+                                        name="correlative"
+                                        required
+                                    )
+                                .form-group
+                                    

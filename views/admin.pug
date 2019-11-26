@@ -3,10 +3,10 @@ extends layouts/layout_admin
 block content
     include navbar.pug
 
-    main.dashboard
+    section.dashboard
         .container
             h1.text-center.mt-4 Administrar mi Hotel.
-            .row.mt-4
+            .row.mt-4.justify-content-center
                 h2 Estadisticas
             .row
                 .col-12.col-md-6.pb-4
@@ -19,7 +19,7 @@ block content
                                 .col-7.col-md-8
                                     .user-stats.mr-4
                                         p.card-subtitle.text-muted.text-uppercase.text-right Usuarios Registrados
-                                        p.card-title.text-right 20
+                                        p(class="card-title text-right")= users
                                         <br/>
                         .card-footer
                             .status
@@ -35,14 +35,50 @@ block content
                                 .col-7.col-md-8
                                     .reservation-stats.mr-4
                                         p.card-subtitle.text-muted.text-uppercase.text-right Reservas Hechas.
-                                        p.card-title.text-right 10
+                                        p(class="card-title text-right")= reservations
                                         <br/>
                         .card-footer
                             .status
                                 i(class="fas fa-sync-alt mr-2") 
                                 span.text-muted Actualizado hace pocos segundos.
-
-                                    
+        <hr/>
+    main.instalaciones-dashboard
+        .container
+            .row.mt-4.justify-content-center
+                h2 Instalaciones
+            .row    
+                .col-12.col-md-6.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="fas fa-building")
+                                .col-7.col-md-8
+                                    .building-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Pisos
+                                        p(class="card-title text-right")= buildings
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.
+                .col-12.col-md-6.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="fas fa-bed")
+                                .col-7.col-md-8
+                                    .building-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Habitaciones
+                                        p(class="card-title text-right")= rooms
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.                                    
 
 
 

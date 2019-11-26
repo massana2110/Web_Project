@@ -8,6 +8,7 @@
     font-family: Lemon_Milk;
 }
 
-.dashboard .row .card .card-body .icon-container i{
+.dashboard .row .card .card-body .icon-container i,
+.instalaciones-dashboard .row .card .card-body .icon-container i{
     font-size: 3.5em;
 }
