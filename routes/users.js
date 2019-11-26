@@ -60,7 +60,7 @@ router.get('/logout', (req,res,next) =>{
 })
 
 /**
- * Get profile page
+ * Get Profile page
  */
 function isAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
@@ -84,5 +84,42 @@ router.get('/perfil', isAuthenticated,async (req, res) => {
 router.get('/admin', isAuthenticated, (req, res) =>{
     res.render('admin', {title: 'Administracion'});
 })
+
+/**
+ * Get Changepassword Page
+ */
+
+router.get('/users/changepassword', (req, res) => {
+    res.render('change_password', { title: 'Cambiar contraseña' });
+})
+
+router.post('/users/changepassword', async(req, res) =>{
+    const { email, password1, password2 } = req.body;
+    let errors = [];
+    if (password1 != password2 ) {
+        errors.push({ text: 'Contraseñas no coinciden ' })
+    }
+    if (password1.length < 8) {
+        errors.push({ text: 'Contraseña debe contener al menos 8 caracteres ' });
+    }
+    if (errors.length > 0) {
+        console.log(errors);
+        res.render('change_password', { title: 'Cambiar contraseña', errors, email })
+    } else {
+        const emailUser = await User.findOne({ email: email });
+        if (!emailUser) {
+            req.flash('error_msg', 'No hay usuarios con este correo');
+            res.redirect('/users/changepassword');
+        } else {
+            //Guardando el usuario
+            const newUser = new User({ name, lastname, age, phone, email, password });
+            newUser.password = await newUser.encryptPassword(password);
+            await newUser.save();
+            req.flash('success_msg', 'Usuario registrado satisfactoriamente');
+            res.redirect('/users/login');
+        }
+    }
+})
+
 
 module.exports = router;

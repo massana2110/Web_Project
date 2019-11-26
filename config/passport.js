@@ -8,13 +8,13 @@ passport.use(new localStrategy({
 },async(req, email, password, done) =>{
     const user = await User.findOne({email: email});
     if(!user){
-        return done(null, false, req.flash('error_msg', 'Usuario no encontrado'));
+        return done(null, false, req.flash('error_msg', 'Datos del usuario no coinciden'));
     }else {
         const match = await user.matchPassword(password);
         if(match){
             return done(null, user);
         }else{
-            return done(null, false, req.flash('error_msg', 'Contraseña no concuerda'));
+            return done(null, false, req.flash('error_msg', 'Datos del ususario no coinciden'));
         }
     }
 }));
