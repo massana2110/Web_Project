@@ -9,29 +9,16 @@ block content
    div.card.container-card
     include partials/messages.pug
     include partials/errors_alerts.pug
-    form(action="/reservaciones/nueva-reservacion" method="POST")
-     label(for="text") Ingrese sus nombres y apellidos:
-     br
-     div#input-names
-      input(type="text", placeholder="Nombres", class="form-control" name="firstname" required)
-      input(type="text", placeholder="Apellidos", class="form-control" name="lastname" required) 
-     br
+    form(action="/reservaciones" method="POST")
+     h4 ¡Bienvenido, #{user.name} #{user.lastname}!
      label(for="phone") Ingrese su numero de telefono:
-     br
-     div#input-tel
-      input(type="phone", placeholder="2567-6789", class="form-control" name="phone" required)
-     br
-     label(for="email") Ingrese su e-mail:
-     br
-     div#input-email
-      input(type="text", placeholder="example@gmail.com", class="form-control" name="email" required)
-     br
+     input(type="phone", placeholder="2567-6789", class="form-control" name="phone" required)
+     label(for="email") Ingrese su e-mail
+     input(type="text", placeholder="example@gmail.com", class="form-control" name="email" required)
      label(for="date") Indique la fecha de llegada y salida de su reserva.
-     br
      div#input-dates
       input(type="date", class="form-control" name="arrive_date" min="2019-11-22" max="2019-12-31" required)#arrival-date
       input(type="date", class="form-control" name="departure_date" min="2019-11-22" max="2019-12-31" required)#departure-date
-     br
      label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
      div#select-room
       select(name="room" class="form-control" size required)
