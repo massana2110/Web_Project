@@ -1,0 +1,22 @@
+extends ../layouts/layout_installation 
+
+block content
+    include ../navbar.pug 
+
+    .container
+        h1.text-center.mt-4 Modificar habitaciones
+        .row
+            .col-12.col-md-6.offset-md-6
+                .card.h-100
+                    h3.card-header.text-center Editar disponibilidad de habitacion
+                    .card-body
+                        form(action="#")
+                            .form-group
+                                label(for="select") Selecciona la habitacion que desea modificar.
+                                select(
+                                    name="typeRoom" 
+                                    class="form-control" 
+                                    id="type"
+                                    size 
+                                    required
+                                )

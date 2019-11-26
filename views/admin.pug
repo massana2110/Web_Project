@@ -4,7 +4,8 @@ block content
     include navbar.pug
 
     section.dashboard
-        .container
+        .container.mt-2
+            include partials/messages.pug
             h1.text-center.mt-4 Administrar mi Hotel.
             .row.mt-4.justify-content-center
                 h2 Estadisticas
@@ -47,7 +48,7 @@ block content
             .row.mt-4.justify-content-center
                 h2 Instalaciones
             .row    
-                .col-12.pb-4
+                .col-12.col-md-6.offset-md-3.pb-4
                     .card.h-100
                         .card-body
                             .row
@@ -64,13 +65,14 @@ block content
                                 i(class="fas fa-sync-alt mr-2") 
                                 span.text-muted Actualizado hace pocos segundos.  
         <hr>
-        .row
-            h2.text-center ¿Que desea hacer?
-        .row 
-            .col-12.col-md-6.mb-4
-                a(href="/instalaciones", class="btn btn-primary btn-block") Añadir habitaciones
-            .col-12.col-md-6.mb-4
-                a(href="#", class="btn btn-primary btn-block") Modificar estado de habitaciones
+        .container.mt-3
+            .row.justify-content-center
+                h2 ¿Que desea hacer?
+            .row.mt-2 
+                .col-12.col-md-6.mb-4
+                    a(href="/instalaciones", class="btn btn-primary btn-block") Añadir habitaciones
+                .col-12.col-md-6.mb-4
+                    a(href="#", class="btn btn-primary btn-block") Modificar estado de habitaciones
 
 
 
