@@ -110,10 +110,10 @@ router.post('/users/changepassword', async(req, res) =>{
             res.redirect('/users/changepassword');
         } else {
             //Guardando el usuario
-            const newUser = new User({ name, lastname, age, phone, email, password });
-            newUser.password = await newUser.encryptPassword(password);
-            await newUser.save();
-            req.flash('success_msg', 'Usuario registrado satisfactoriamente');
+            const updateUser = User.update({ password });
+            updateUser.password = await updateUser.encryptPassword(password);
+            await updateUser.save();
+            req.flash('success_msg', 'Usuario modificado satisfactoriamente');
             res.redirect('/users/login');
         }
     }
