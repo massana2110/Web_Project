@@ -1,24 +1,52 @@
 extends ../layouts/layout_installations 
 
 block content
-    include navbar.pug
+    include ../navbar.pug
 
     section#installations
         .container
+            h1.text-center.mt-4 Añade tus habitaciones
             .row
-                .col-md-6
+                .col-md-6.offset-md-3.mt-4
                     .card.h-100
-                        h3.card-header.text-center Pisos
+                        h3.card-header.text-center Habitacion
                         .card-body
-                            form(action="#")
+                            form(action="/instalaciones", method="POST")
                                 .form-group
+                                    label(for="type") Tipo de habitacion
+                                    select(
+                                        name="typeRoom" 
+                                        class="form-control" 
+                                        id="type"
+                                        size 
+                                        required
+                                    )
+                                        option(value="sencilla") Sencilla
+                                        option(value="doble") Doble
+                                .form-group
+                                    label(for="correlative") Correlativo
                                     input(
                                         type= "text"
-                                        maxlength= "1"
-                                        class="form-control"
-                                        placeholder="Correlativo"
-                                        name="correlative"
+                                        class= "form-control"
+                                        name= "correlative"
+                                        id= "correlative"
+                                        placeholder= "Ej. A1"
                                         required
                                     )
                                 .form-group
-                                    
+                                    label(for="cost") Costo de la habitacion
+                                    input(
+                                        type= "number"
+                                        class= "form-control"
+                                        name= "cost"
+                                        id= "cost"
+                                        min= "0"
+                                        placeholder= "50"
+                                        required
+                                    )
+                                .form-group
+                                    button(
+                                        type= "submit"
+                                        class= "btn btn-success btn-block"
+                                    ) Añadir
+                                
