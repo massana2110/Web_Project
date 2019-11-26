@@ -57,7 +57,7 @@ router.get('/logout', (req,res,next) =>{
 })
 
 /**
- * Get profile page
+ * Get Profile page
  */
 function isAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
@@ -77,7 +77,9 @@ router.get('/admin', isAuthenticated, (req, res) =>{
     res.render('admin', {title: 'Administracion'});
 })
 
-/*GET ChangePassword page */
+/*
+ * Get ChangePassword page
+ */
 router.get('/users/changepassword', (req, res) => {
     res.render('change_password', { title: 'Cambiar contraseña' });
 })
