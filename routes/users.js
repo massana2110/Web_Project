@@ -77,4 +77,10 @@ router.get('/admin', isAuthenticated, (req, res) =>{
     res.render('admin', {title: 'Administracion'});
 })
 
+/*GET ChangePassword page */
+router.get('/users/changepassword', (req, res) => {
+    res.render('change_password', { title: 'Cambiar contraseña' });
+})
+
+
 module.exports = router;
