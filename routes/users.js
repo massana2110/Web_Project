@@ -73,16 +73,19 @@ router.get('/perfil', isAuthenticated,async (req, res) => {
     const reservaciones= await Reservation.find({user: req.user.id}).sort({arrive_date:'asc'})
     
     .then((reservaciones) => {
-      res.render('profile', { title: 'Listing registrations', reservaciones });
+      res.render('profile', { title: 'Perfil de usuario', reservaciones });
     })
-    .catch(() => { res.send('Sorry! Something went wrong.'); });
+    .catch(() => { res.send('Ups! Algo salio mal'); });
 });
 
 /**
  * Get Admin Page
  */
-router.get('/admin', isAuthenticated, (req, res) =>{
-    res.render('admin', {title: 'Administracion'});
+router.get('/admin', isAuthenticated, async (req, res) =>{
+    const users = await User.countDocuments({});
+    const reservations = await Reservation.countDocuments({});
+    const buildings = await Building.find().countDocuments({})
+    res.render('admin', {title: 'Administracion', users, reservations, buildings});
 })
 
 /**
