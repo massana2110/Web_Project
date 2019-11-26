@@ -2,15 +2,22 @@ const express = require('express');
 const router = express.Router();
 const Reservation = require('../models/Reservation');
 const User = require('../models/User');
-const Room = require('../models/Rooms');
+const Room = require('../models/Room');
 
+
+function isAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next();
+    }
+    res.redirect('/users/login');
+};
 
 /*GET home page */
-router.get('/reservaciones', async(req,res,next) =>{
-    const rooms = await Room.find(req.body);
-    res.render('add_reservation', { title: 'Reservacion' });
+router.get('/reservaciones', isAuthenticated, async(req,res) =>{
+    Room.find(function(err,rooms){
+        res.render('add_reservation', { title: 'Reservacion' , rooms: rooms});
+    })
 })
-
 
 router.post('/reservaciones',async (req,res,next)=>{
     const {phone, email, arrive_date, departure_date, room, package} = req.body;
@@ -36,7 +43,7 @@ router.post('/reservaciones',async (req,res,next)=>{
         req.flash('success_msg', '¡Reservación añadida con exito! Puede ver sus reservas en la pestaña de su perfil.')
         res.redirect('/reservaciones');
     } 
-    
+
 })
 
 module.exports = router;

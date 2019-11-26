@@ -86,7 +86,7 @@ label{
     background-color: whitesmoke;
   }
 
-@media screen and (max-width: 867px){
+@media screen and (max-width: 767px){
     
     .form-container {
        width: 100%;

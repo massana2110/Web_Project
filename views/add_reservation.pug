@@ -22,17 +22,9 @@ block content
      label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
      div#select-room
       select(name="room" class="form-control" size required)
-       option(value="A1") #{rooms.correlative}
-       option(value="A2") A2
-       option(value="A3") A3
-       option(value="A4") A4
-       option(value="A5") A5
-       option(value="A6") A6
-       option(value="A7") A7
-       option(value="A8") A8
-       option(value="A9") A9
-       option(value="A10") A10
-       option(value="B2") B2
+       if rooms
+          each room in rooms
+            option #{room.correlative}, #{room.typeRoom} 
      label(for="choose-package") Escoja un paquete para su reserva.
      div#select-package
       select(name="package", class="form-control" required)
