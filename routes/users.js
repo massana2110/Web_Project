@@ -69,8 +69,13 @@ function isAuthenticated(req, res, next) {
     res.redirect('/users/login');
 };
 
-router.get('/perfil', isAuthenticated, (req, res) => {
-    res.render('profile', { title: 'Perfil' });
+router.get('/perfil', isAuthenticated,async (req, res) => {
+    const reservaciones= await Reservation.find({user: req.user.id}).sort({arrive_date:'asc'})
+    
+    .then((reservaciones) => {
+      res.render('profile', { title: 'Perfil de usuario', reservaciones });
+    })
+    .catch(() => { res.send('Ups! Algo salio mal'); });
 });
 
 /**
