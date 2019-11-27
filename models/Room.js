@@ -9,4 +9,6 @@ RoomSchema = new Schema({
     isAvailable: {type: Boolean, required: true, default: true},
 });
 
-module.exports = mongoose.model('rooms', RoomSchema);
+var room = mongoose.model('rooms', RoomSchema)
+
+module.exports = room;
