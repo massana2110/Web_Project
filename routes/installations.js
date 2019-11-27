@@ -24,4 +24,15 @@ router.post('/instalaciones', async (req, res, next) => {
     res.redirect('/admin');
 })
 
+router.get('/instalaciones/all_rooms', isAuthenticated, async (req, res) =>{
+    const rooms = await Room.find({});
+    res.render('installations/all_installations', {title: 'Habitaciones', rooms});
+})
+
+router.get('instalaciones/modify/:id', async (req, res)=> {
+    const room = await Room.findById(req.params.id);
+    res.render('installations/edit_installation', {title: 'Modificar habitacion', room});
+
+})
+
 module.exports = router;
