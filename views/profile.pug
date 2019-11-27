@@ -18,20 +18,20 @@ block content
         section#reservation
             if reservaciones.length
               .reservas-container
-                .row.justify-content-center
-                    .row.pt-2
+                .row-content-center
+                    .row.pt-4
                         .col.text-center.text-uppercase.mt-3.mb-3
                            h1.text-center.pt-2 Reservas
-                    .row.pb-4
-                    
+                    .row.justify-content-center.pb-4
                       each reserva in reservaciones
                         .col-12.col-md-6.col-lg-4.mb-3
                             .card.h-100
                                 h3.card-header.text-center.text-uppercase Paquete #{reserva.package}
                                 .card-body
-                                    p.card-text.text-uppercase Entrada: #{reserva.arrive_date}
+                                    p.card-text.text-uppercase  Entrada: #{reserva.arrive_date}
                                     p.card-text.text-uppercase  Fecha de salida:#{reserva.departure_date}
                                     p.card-text.text-uppercase  Habitacion: #{reserva.room}
+                          
                                     
                         
 
