@@ -14,8 +14,8 @@ function isAuthenticated(req, res, next) {
 
 /*GET home page */
 router.get('/reservaciones', isAuthenticated, async(req,res) =>{
-    Room.find(function(err,rooms){
-        res.render('add_reservation', { title: 'Reservacion' , rooms: rooms});
+    Room.find(function(err,rooms, isAvailable){
+        res.render('add_reservation', { title: 'Reservacion' , rooms: rooms, isAvailable});
     })
 })
 
