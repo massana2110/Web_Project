@@ -5,7 +5,7 @@ const passport = require('passport');
 //Models
 const User = require('../models/User');
 const Reservation = require('../models/Reservation');
-const Building = require('../models/Building');
+const Room = require('../models/Room');
 
 
 /*GET login page */
@@ -84,8 +84,8 @@ router.get('/perfil', isAuthenticated,async (req, res) => {
 router.get('/admin', isAuthenticated, async (req, res) =>{
     const users = await User.countDocuments({});
     const reservations = await Reservation.countDocuments({});
-    const buildings = await Building.find().countDocuments({})
-    res.render('admin', {title: 'Administracion', users, reservations, buildings});
+    const rooms = await Room.find().countDocuments({});
+    res.render('admin', {title: 'Administracion', users, reservations, rooms});
 })
 
 /**
