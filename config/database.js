@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/asteriadb', {
+mongoose.connect('mongodb+srv://damz1021:rootDavid@myfirstcluster-dzpko.mongodb.net/asteriadb', {
     useNewUrlParser: true,
     useUnifiedTopology: true 
 })
