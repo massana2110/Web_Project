@@ -1,0 +1,13 @@
+@import url(fonts.css);
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- FOOTER ----- */
+#footer{
+    background-color: #010125;
+    color: #ffffff;
+    position:static;
+}
