@@ -68,7 +68,9 @@ function isAuthenticated(req, res, next) {
     }
     res.redirect('/users/login');
 };
-
+/**
+ * Get Perfil Page
+ */
 router.get('/perfil', isAuthenticated,async (req, res) => {
     const reservaciones= await Reservation.find({user: req.user.id}).sort({arrive_date:'asc'})
     
@@ -77,7 +79,14 @@ router.get('/perfil', isAuthenticated,async (req, res) => {
     })
     .catch(() => { res.send('Ups! Algo salio mal'); });
 });
-
+/**
+ * Delete a reservation by id
+ */
+router.delete('/reservaciones/delete/:id', isAuthenticated, async (req, res) => {
+    await Reservation.findByIdAndDelete(req.params.id);
+    req.flash('success_msg', '¡Reservación eliminada con exito! Puede hacer mas reservaciones en la pestaña de reservas.')
+    res.redirect('/perfil');
+  });
 /**
  * Get Admin Page
  */
