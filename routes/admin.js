@@ -50,11 +50,11 @@ router.get('/admin/instalaciones/modify/:id', async (req, res)=> {
     res.render('installations/edit_installation', {title: 'Modificar habitacion', room});
 });
 
-router.put('/admin/instalaciones/modify/:id', async (req, res)=> {
-    console.log(req.body);
-    const { typeRoom, cost, isAvailable } = req.body;
-    let newDisp = !isAvailable;
-    await Room.findByIdAndUpdate(req.params.id, {typeRoom, cost, newDisp});
+router.put('/admin/instalaciones/modify-room/:id', async (req, res)=> {
+    const { correlative, typeRoom, cost, isAvailable } = req.body;
+    let castBool = Boolean(isAvailable);
+    let getBool = !castBool;
+    await Room.findByIdAndUpdate(req.params.id, {correlative, typeRoom, cost, getBool});
     req.flash('success_msg', 'Habitacion modificada satisfactoriamente')
     res.redirect('/admin/instalaciones/all_rooms');
 })

@@ -25,12 +25,12 @@ block content
                                     else
                                         p NO
                             .card-footer
-                                form.form-inline
-                                    a(href='/admin/instalaciones/delete/'+room.id)
-                                        button(
-                                            class="btn btn-danger btn-sm mr-3"
-                                            type= "button"
-                                        ) Eliminar
+                                form.form-inline(action='/admin/instalaciones/delete/' + room.id + "?_method=DELETE" method="POST")
+                                    input(type="hidden", name='_method', value='DELETE')
+                                    button(
+                                        class="btn btn-danger btn-sm mr-3"
+                                        type= "submit"
+                                    ) Eliminar
                                     a(href='/admin/instalaciones/modify/'+room.id)
                                         button(
                                             class="btn btn-primary btn-sm"
