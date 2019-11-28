@@ -78,15 +78,7 @@ router.get('/perfil', isAuthenticated,async (req, res) => {
     .catch(() => { res.send('Ups! Algo salio mal'); });
 });
 
-/**
- * Get Admin Page
- */
-router.get('/admin', isAuthenticated, async (req, res) =>{
-    const users = await User.countDocuments({});
-    const reservations = await Reservation.countDocuments({});
-    const rooms = await Room.find().countDocuments({});
-    res.render('admin', {title: 'Administracion', users, reservations, rooms});
-})
+
 
 /**
  * Get Changepassword Page

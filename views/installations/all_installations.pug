@@ -5,6 +5,7 @@ block content
 
     section#instalaciones
         .container
+            include ../partials/messages.pug
             h1.text-center.mt-4 Mis Habitaciones
             .row 
                 each room in rooms   
@@ -25,14 +26,16 @@ block content
                                         p NO
                             .card-footer
                                 form.form-inline
-                                    button(
-                                        class="btn btn-danger btn-sm"
-                                        type= "button"
-                                    ) Eliminar
-                                    button(
-                                        class="btn btn-primary btn-sm"
-                                        type= "button"
-                                    ) Modificar 
+                                    a(href='/admin/instalaciones/delete/'+room.id)
+                                        button(
+                                            class="btn btn-danger btn-sm mr-3"
+                                            type= "button"
+                                        ) Eliminar
+                                    a(href='/admin/instalaciones/modify/'+room.id)
+                                        button(
+                                            class="btn btn-primary btn-sm"
+                                            type= "button"
+                                        ) Modificar 
                         
 
                          

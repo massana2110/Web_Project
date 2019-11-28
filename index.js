@@ -59,6 +59,7 @@ app.use(require('./routes'));
 app.use(require('./routes/users'));
 app.use(require('./routes/add_reservation'));
 app.use(require('./routes/installations'))
+app.use(require('./routes/admin'));
 
 //Listening the server
 http.createServer(app).listen(app.get("port"), function () {
