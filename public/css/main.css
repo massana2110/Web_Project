@@ -281,11 +281,6 @@ body {
     color: #fff;
     text-transform: uppercase;
 }
-/* ---- FOOTER ----- */
-#footer{
-    background-color: #010125;
-    color: #ffffff;
-}
 
 /* MEDIA QUERIES */
 @media (max-width: 767px) {

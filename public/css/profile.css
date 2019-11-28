@@ -15,7 +15,14 @@ body{
     background-size:cover;
     width: 100%;
     
+    
 }
+.container-fluid .mx-auto {
+    display: block;
+    width: 125px;
+    height: 100px;
+}
+
 
 h1 {
     font-family: Lemon_Milk;
@@ -23,11 +30,7 @@ h1 {
     letter-spacing: 6px;
     
 }
-img {
-    display: block;
-    width: 125px;
-    height: 100px;
-}
+
 
 .btn{
     margin-top: 1em;
@@ -74,7 +77,7 @@ a{
 }
 
 #reservation .reservas-container .row .card .card-header{
-    background-color: #CF8A01;
+    background-color: rgb(88, 130, 207);
     font-family: Lemon_Milk;
     color: rgba(255, 255, 255, 0.87);
     font-size: 1.5em;
@@ -92,9 +95,7 @@ a{
     text-align: justify;
 }
 
-#reservation .reservas-container .row .card .card-body p:nth-child(2){
-    font-size: 1.2em;
-}
+
 @media screen and (max-width: 767px ){
     .form-container{
         border: 0px solid #ffffff;

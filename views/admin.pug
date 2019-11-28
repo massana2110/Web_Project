@@ -4,7 +4,8 @@ block content
     include navbar.pug
 
     section.dashboard
-        .container
+        .container.mt-2
+            include partials/messages.pug
             h1.text-center.mt-4 Administrar mi Hotel.
             .row.mt-4.justify-content-center
                 h2 Estadisticas
@@ -47,23 +48,7 @@ block content
             .row.mt-4.justify-content-center
                 h2 Instalaciones
             .row    
-                .col-12.col-md-6.pb-4
-                    .card.h-100
-                        .card-body
-                            .row
-                                .col-5.col-md-4
-                                    .icon-container.ml-4
-                                        i(class="fas fa-building")
-                                .col-7.col-md-8
-                                    .building-stats.mr-4
-                                        p.card-subtitle.text-muted.text-uppercase.text-right Pisos
-                                        p(class="card-title text-right")= buildings
-                                        <br/>
-                        .card-footer
-                            .status
-                                i(class="fas fa-sync-alt mr-2") 
-                                span.text-muted Actualizado hace pocos segundos.
-                .col-12.col-md-6.pb-4
+                .col-12.col-md-6.offset-md-3.pb-4
                     .card.h-100
                         .card-body
                             .row
@@ -78,7 +63,17 @@ block content
                         .card-footer
                             .status
                                 i(class="fas fa-sync-alt mr-2") 
-                                span.text-muted Actualizado hace pocos segundos.                                    
+                                span.text-muted Actualizado hace pocos segundos.  
+        <hr>
+        .container.mt-3
+            .row.justify-content-center
+                h2 ¿Que desea hacer?
+            .row.mt-2 
+                .col-12.col-md-6.mb-4
+                    a(href="/instalaciones", class="btn btn-primary btn-block") Añadir habitaciones
+                .col-12.col-md-6.mb-4
+                    a(href="/instalaciones/all_rooms", class="btn btn-primary btn-block") Modificar estado de habitaciones
 
 
+    include footer.pug
 

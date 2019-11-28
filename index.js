@@ -1,6 +1,10 @@
 /**
  * Module Dependencies
  */
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').config();
+} 
+
 const express = require('express'); 
 const http = require('http');
 const path = require('path');
