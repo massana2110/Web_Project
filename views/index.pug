@@ -1,0 +1,160 @@
+extends layouts/layout_index
+
+block content
+    include navbar.pug
+
+    section#section-carousel
+        #carousel.carousel.slide.carousel-fade(data-ride="carousel", data-pause="false")
+            ol.carousel-indicators
+                li(data-target="#carousel", data-slide-to="0", class="active")
+                li(data-target="#carousel", data-slide-to="1", class="active")
+                li(data-target="#carousel", data-slide-to="2", class="active")
+            .carousel-inner(role="listbox")
+                .carousel-item.active
+                    img(src="images/carousel/hotel_carousel.jpeg", class="d-block w-100", alt="our-hotel1")
+                    .carousel-caption.text-center
+                        h1 Bienvenido a Asteria
+                        h3 ¡Vive la experiencia!
+                .carousel-item          
+                    img(src="images/hotel_rooms/hotel_bedroom.jpeg", class="d-block w-100", alt="our_hote2")
+                    .carousel-caption.text-center
+                        h2 Vive un sueño
+                        h3 En nuestras modernas instalaciones
+                .carousel-item          
+                    img(src="images/carousel/hotel_view.jpg", class="d-block w-100", alt="our_hote3")
+                    .carousel-caption.text-center
+                        h4.text-center Haz tu reserva ¡ya! 
+            a.carousel-control-prev(href="#carousel", role="button", data-slide="prev")
+                span.carousel-control-prev-icon(aria-hidden="true") 
+                span.sr-only Anterior
+            a.carousel-control-next(href="#carousel", role="button", data-slide="next")
+                span.carousel-control-next-icon(ariaa-hidden="true")
+                span.sr-only Siguiente
+    //Seccion de acerca de nosotros
+    section#about-us
+        .container
+            h2.text-center.pt-2 
+                span.borde.borde1 ¿Quiénes 
+                span.borde.borde2 somos?
+            p.text-justify.mt-4.pt-2 El hotel Asteria es un lugar calido y acogedor, que promete ponerlo en contacto con la cultura y la naturaleza donde se brinda un servicio personalizado con el mejor talento humano.Nuestra Misión como hotel es brindar siempre el mejor de los servicios, caracterizándonos por la calidad, confiabilidad y profesionalismo; a fin de satisfacer las necesidades de relajamiento y comodidad, creando un ambiente de tranquilidad y contribuyendo a una nueva experiencia de servicios
+    //Seccion de las instalaciones        
+    section#instalaciones
+        .container
+            .row
+                .col.text-center.text-uppercase.mt-4.mb-3
+                    h2 Nuestro hogar
+            .row
+                .col-12.col-md-6.col-lg-4.mb-4
+                    .card.h-100   
+                        img(src="/images/hotel_rooms/habitaciones.jpg", class="card-img-top", alt="Habitaciones")
+                        .card-body
+                            h5.card-title.mb-0 Habitaciones
+                            p.card-text.text-justify Nuestras recién renovadas habitaciones están diseñadas para ofrecerle su mejor descanso que incluye ventanas anti-ruido, sábanas con 300 hilos de algodón egipcio, almohadas de plumas de ganso, televisores, conector multimedia, lámparas de lectura, cajas de seguridad con capacidad para guardar su laptop, despertador, internet de alta velocidad y un escritorio de trabajo para  comodidad.
+                .col-12.col-md-6.col-lg-4.mb-4
+                    .card.h-100
+                        img(src="/images/hotel_restaurant/restaurante.jpg", class="card-img-top", alt="Restaurantes")
+                        .card-body.card-color
+                            h5.card-title.mb-0 Restaurantes
+                            p.card-text.text-justify Nuestro restaurante, lugar donde podrá disfrutar de exquisitos cortes de carne servidos en espadas en el tradicional estilo de rodizio. Nuestro personal estará encantado de aconsejarle sobre los mejores vinos para complementar su experiencia culinaria. Lunes a sabado, cena de 7:00 pm a 11:00 pm. Los domingos, disfrute de nuestro exquisito brunch de 12:00 pm a 5:00 pm.
+                .col-12.col-md-6.offset-md-3.col-lg-4.offset-lg-0.mb-4
+                    .card.h-100
+                        img(src="/images/hotel_pool/piscina.jpg", class="card-img-top", alt="Piscinas")
+                        .card-body
+                            h5.card-title.mb-0 Piscinas
+                            p.card-text.text-justify En nuestro hotel Asteria podrá disfrutar de un lugar ideal para el relax junto a nuestra piscina y el descanso después de un intenso día de turismo o trabajo en la ciudad. Un espacio privilegiado desde donde disfrutar del sol y del verano. En Asteria hemos hecho la experiencia común de nadar para algunos, algo inolvidable para todos. De viernes a domingo, música en vivo junto al área de piscina.
+    //Seccion de Paquetes
+    section#paquetes
+        .container
+            .row.pt-2
+                .col.text-center.text-uppercase.mt-3.mb-3
+                    h2 Visitanos
+            .row.pb-4
+                .col-12.col-md-6.col-lg-4.mb-3
+                    .card.h-100
+                        h3.card-header.text-center.text-uppercase Un sueño
+                        .card-body
+                            h4.card-title.text-center $100.00
+                            p.card-text.text-uppercase Incluye
+                            p.card-text - Acceso a Internet Ilimitado.
+                            p.card-text - Acceso gratuito a la piscina principal.
+                            p.card-text - Bouffet "all you can eat" incluido en un tiempo de comida.
+                            p.card-text - Incluido una caminata turistica guiada.
+                .col-12.col-md-6.col-lg-4.mb-3
+                    .card.h-100
+                        h3.card-header.text-center.text-uppercase Prueba el cielo
+                        .card-body
+                            h4.card-title.text-center $200.00
+                            p.card-text.text-uppercase Incluye
+                            p.card-text - Bouffet "all you can eat" incluido en 2 tiempos de comida.
+                            p.card-text - Acceso gratuito a la piscina principal.
+                            p.card-text - Servicio a habitacion gratuito.
+                            p.card-text - Incluido una caminata turistica guiada.
+                            p.card-text - Acceso a Internet Ilimitado.
+                .col-12.col-md-6.offset-md-3.col-lg-4.offset-lg-0.mb-3
+                    .card.h-100
+                        h3.card-header.text-center.text-uppercase El cielo en la tierra
+                        .card-body
+                            h4.card-title.text-center $350.00
+                            p.card-text.text-uppercase Incluye
+                            p.card-text - Bouffet "all you can eat" incluido en los 3 tiempos de comida.
+                            p.card-text - Acceso gratuito a todas las instalaciones.
+                            p.card-text - Servicio a habitacion gratuito.
+                            p.card-text - Incluido dos caminatas turisticas guiadas.
+                            p.card-text - Acceso a Internet Ilimitado.
+    //Seccion Te Esperamos
+    section#see_you
+        .container-fluid.action.background
+            h2.text-uppercase.text-center ¡te esperamos!
+    //Seccion social media
+    section#social-media.pb-4
+        .container
+            .row
+                .col-12.col-md-6.mt-4
+                    .img-container 
+                        img(src="images/logo-02.png") 
+                    <br>
+                    .info-container 
+                        .content
+                            i(class="fas fa-map-marker-alt")  
+                            span.text  Carretera al litoral Km. 84 Acajutla, Sonsonate, El Salvador <br>
+                        .content
+                            i(class="far fa-envelope")
+                            span.text  asteria.hotel2019@gmail.com <br>
+                        .content 
+                            i(class="fas fa-phone-volume")
+                            span.text  Tel. 2567-6789 <br>
+                        .content
+                            span.social-btn.facebook 
+                                a(href="https://www.facebook.com/Hotel-Asteria-108061977320640/?modal=admin_todo_tour", target="_blank")
+                                    i(class="fab fa-facebook-f")
+                            span.social-btn.insta
+                                a(href="https://www.instagram.com/hotelasteria/", target="_blank")
+                                    i(class="fab fa-instagram")
+                            span.social-btn.twitter
+                                a(href="https://twitter.com/asteria96764173", target="_blank")
+                                    i(class="fab fa-twitter")
+                            span.text  Asteria Hotel & Resort
+                .col-12.col-md-6.mt-4
+                    h4.text-center.text-uppercase Contáctanos
+                    form
+                        .form-group
+                            label(for="name") Nombre
+                            input(type="text", class="form-control", placeholder="Nombre")
+                        .form-group
+                            label(for="email") Correo Electrónico
+                            input(type="email", class="form-control", placeholder="name@example.com")
+                        .form-group
+                            label(for="message") Mensaje
+                            textarea(name="mensaje", rows="3", class="form-control", placeholder="Tu mensaje")
+                        button(type="submit", class="btn btn-danger btn-lg btn-block") Enviar
+    //Footer
+    include footer.pug
+
+
+
+
+
+
+                
+
+

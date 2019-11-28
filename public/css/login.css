@@ -1,0 +1,63 @@
+@import url(fonts.css);
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Futura-Round;
+}
+
+.container-fluid{
+    background-image: url(../images/loginbackground.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Lemon_Milk;
+    color: #00012f;
+    letter-spacing: 2px;
+}
+img {
+    display: block;
+    width: 125px;
+    height: 100px;
+}
+
+.btn{
+    margin-top: 1em;
+}
+
+.form-container{
+    padding: 30px 40px;
+    margin-top: 15vh;
+    box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+}
+
+p{
+    font-family: Futura-Demi;
+    color: #00012f;
+    margin-bottom: 1px;
+}
+
+label{
+    font-family: Futura-Demi;
+    color: #00012f;
+}
+
+a{
+    font-family: Futura-Demi;
+}
+
+@media screen and (max-width: 767px ){
+    .form-container{
+        border: 0px solid #ffffff;
+        padding: 30px 40px;
+        margin-top: 10vh;
+        box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    } 
+}

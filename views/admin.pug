@@ -1,0 +1,79 @@
+extends layouts/layout_admin
+
+block content
+    include navbar.pug
+
+    section.dashboard
+        .container.mt-2
+            include partials/messages.pug
+            h1.text-center.mt-4 Administrar mi Hotel.
+            .row.mt-4.justify-content-center
+                h2 Estadisticas
+            .row
+                .col-12.col-md-6.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="fas fa-users")
+                                .col-7.col-md-8
+                                    .user-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Usuarios Registrados
+                                        p(class="card-title text-right")= users
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.
+                .col-12.col-md-6.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="far fa-calendar-alt")
+                                .col-7.col-md-8
+                                    .reservation-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Reservas Hechas.
+                                        p(class="card-title text-right")= reservations
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.
+        <hr/>
+    main.instalaciones-dashboard
+        .container
+            .row.mt-4.justify-content-center
+                h2 Instalaciones
+            .row    
+                .col-12.col-md-6.offset-md-3.pb-4
+                    .card.h-100
+                        .card-body
+                            .row
+                                .col-5.col-md-4
+                                    .icon-container.ml-4
+                                        i(class="fas fa-bed")
+                                .col-7.col-md-8
+                                    .building-stats.mr-4
+                                        p.card-subtitle.text-muted.text-uppercase.text-right Habitaciones
+                                        p(class="card-title text-right")= rooms
+                                        <br/>
+                        .card-footer
+                            .status
+                                i(class="fas fa-sync-alt mr-2") 
+                                span.text-muted Actualizado hace pocos segundos.  
+        <hr>
+        .container.mt-3
+            .row.justify-content-center
+                h2 ¿Que desea hacer?
+            .row.mt-2 
+                .col-12.col-md-6.mb-4
+                    a(href="/admin/instalaciones", class="btn btn-primary btn-block") Añadir habitaciones
+                .col-12.col-md-6.mb-4
+                    a(href="/admin/instalaciones/all_rooms", class="btn btn-primary btn-block") Modificar estado de habitaciones
+
+
+    include footer.pug
+

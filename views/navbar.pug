@@ -1,0 +1,43 @@
+nav#header.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container
+        a(class="navbar-brand", href="/") 
+            img(src="/images/logo-02.png", alt="Asteria Logo") 
+            span Asteria Hotel
+        button(
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        )
+            span(class="navbar-toggler-icon")
+            
+        #navbar(class="collapse navbar-collapse")
+            ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+                li.nav-item.active
+                    a.nav-link(href="/#about-us") ¿Quiénes somos?
+                li.nav-item
+                    a.nav-link(href="/#instalaciones") Instalaciones
+                li.nav-item
+                    a.nav-link(href="/#paquetes") Paquetes
+                li.nav-item
+                    a.nav-link(href="/reservaciones") ¡Haz tu reserva!
+            if !user
+                form.form-inline.my-2.mr-md-0
+                    a(href="/users/login")
+                        button.btn.btn-outline-light.mr-2(type="button") Iniciar Sesión
+                    a(href="/users/signup")    
+                        button.btn.btn-light.my-2.my-sm-1(type="button") Registrate
+            else
+                ul.nav.navbar-nav.navbar-right
+                    li.dropdown.my-2.mr-md-0
+                            a.nav-link.dropdown-toggle(href="#", id="navbarDropdown", role="button", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+                                i(class="fas fa-user mr-1") 
+                                strong=user.name
+                            .dropdown-menu(aria-labelledby="navbarDropdown")
+                                a.dropdown-item(href="/perfil") Perfil
+                                if user.name === 'superAdmin'
+                                    a.dropdown-item(href="/admin") Administrar Hotel
+                                a.dropdown-item(href="/logout") Cerrar Sesión

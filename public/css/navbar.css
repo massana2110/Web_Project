@@ -1,0 +1,48 @@
+@import url(fonts.css);
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ----- NAVBAR ------*/
+.navbar {
+    text-transform: uppercase;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    background-color: #00012f !important;
+}
+
+.navbar .navbar-brand img {
+    height: 2rem;
+}
+
+#header .container #navbar .navbar-nav .nav-item {
+    padding-right: .5rem;
+}
+
+#header .container #navbar .navbar-nav .nav-item .nav-link {
+    font-family: Futura-Round;
+    color: #ffffff;
+    padding-top: .8rem;
+}
+#header .container #navbar .navbar-nav .nav-item .nav-link.active,
+#header .container #navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #CF8A01;
+}
+
+#header .container #navbar .btn-group .btn {
+    font-family: Futura-Round;
+}
+
+#header .container #navbar .btn-group .btn-primary {
+    color: #fff;
+}
+
+#header .container #navbar .btn-group .btn-outline-primary:hover {
+    color: #fff;
+}

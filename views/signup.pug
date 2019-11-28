@@ -1,0 +1,94 @@
+extends layouts/layout_signup
+
+block content
+
+    .container-fluid.bg
+        .row.justify-content-center        
+            .col-sm-12.col-md-8.col-xl-6
+                .form-container
+                    .row
+                        .col-12.col-md-6
+                            h1.text-center Registrate
+                            h2.text-center ¡Vive la experiencia!
+                        .col-12.col-md-6
+                            img(src="../images/logo.png" class="mx-auto mb-3")
+                    include partials/messages.pug
+                    include partials/errors_alerts.pug
+                    form(action="/users/signup", method="POST")
+                        .form-row
+                            .form-group.col-md-6
+                                label(for="name") Nombre
+                                input(
+                                    type= "text"
+                                    class= "form-control"
+                                    placeholder= "Nombre"
+                                    name= "name"
+                                    value= name
+                                    required
+                                )
+                            .form-group.col-md-6
+                                label(for="lastname") Apellidos
+                                input(
+                                    type= "text"
+                                    class= "form-control"
+                                    placeholder= "Apellidos"
+                                    name= "lastname"
+                                    value= lastname
+                                    required
+                                )  
+                        .form-row
+                            .form-group.col-6
+                                label(for="age") Edad
+                                input(
+                                    type= "number"
+                                    class= "form-control"
+                                    placeholder= "18"
+                                    min= "1"
+                                    max= "100"
+                                    name= "age"
+                                    value= age
+                                    required
+                                )
+                            .form-group.col-6
+                                label(for="phone") Teléfono
+                                input(
+                                    type= "text"
+                                    class= "form-control"
+                                    placeholder= "2318-8747"
+                                    name= "phone"
+                                    value= phone
+                                    required
+                                )                            
+                        .form-group
+                            label(for="email") Correo Electronico
+                            input(
+                                type="email"
+                                class="form-control"
+                                placeholder="example@gmail.com"
+                                name= "email"
+                                required
+                            )
+                        .form-row
+                            .form-group.col-md-6    
+                                label(for="password") Contraseña
+                                input(
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Contraseña"
+                                    name="password"
+                                    required
+                                )
+                            .form-group.col-md-6    
+                                label(for="verify") Confirmar contraseña
+                                input(
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Confirmar contraseña"
+                                    name="verify"
+                                    required
+                                )
+                        .form-group
+                            button(
+                                type: "submit"
+                                class="btn btn-primary"
+                            ) Registrarme      

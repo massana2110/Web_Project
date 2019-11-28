@@ -1,0 +1,76 @@
+extends ../layouts/layout_installations  
+
+block content
+    include ../navbar.pug 
+
+    .container
+        h1.text-center.mt-4 Modificar habitaciones
+        <hr>
+        .row
+            .col-12.col-md-6.offset-md-3
+                .card.h-100.mt-3
+                    h3.card-header.text-center Editar disponibilidad de habitacion
+                    .card-body
+                        form(action='/admin/instalaciones/modify-room/' + room.id + "?_method=PUT" method="POST")
+                            input(type="hidden" name='_method' value='PUT')
+                            .form-group
+                                label(for="correlative") Habitacion que desea modificar:
+                                input(
+                                    type= "text"
+                                    name="correlative" 
+                                    class="form-control" 
+                                    id="type"
+                                    value= room.correlative
+                                    disabled
+                                )
+                            .form-group
+                                label(for="type")
+                                input(
+                                    type= "text"
+                                    name="typeRoom" 
+                                    class="form-control" 
+                                    id="type"
+                                    value= room.typeRoom
+                                    disabled
+                                )
+                            .form-group 
+                                label(for= "cost") Nuevo costo:
+                                input(
+                                    type= "number"
+                                    name="cost"
+                                    class="form-control"
+                                    id="cost"
+                                    value= room.cost
+                                )
+                            .form-group
+                                p ¿Habilitada? #{room.isAvailable}
+                                if room.isAvailable
+                                    .custom-control.custom-checkbox
+                                        input(
+                                            type= "checkbox"
+                                            name= "isAvailable"
+                                            class= "custom-control-input"
+                                            id="available"
+                                            value= "false"
+                                            required
+                                        )
+                                        label(class="custom-control-label", for="available") Deshabilitar
+                                else
+                                    .custom-control.custom-checkbox
+                                        input(
+                                            type= "checkbox"
+                                            name= "isAvailable"
+                                            class= "custom-control-input"
+                                            id="available"
+                                            checked 
+                                            value= "true"
+                                            required
+                                        )
+                                        label(class="custom-control-label", for="available") Habilitar
+                            .form-group
+                                button(
+                                    type="submit"
+                                    class="btn btn-success btn-block btn-sm"
+                                ) Modificar
+
+    include ../footer.pug

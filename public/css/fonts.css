@@ -1,0 +1,43 @@
+/*Custom Fonts*/
+/* Futura - Round */
+@font-face {
+    font-family: Futura-Round;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round.ttf)
+}
+
+@font-face {
+    font-family: Futura-Round-Bold;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Cond\ Bold.ttf)
+}
+
+@font-face {
+    font-family: Futura-Bold_Oblique;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Bold\ Oblique.ttf)
+}
+
+@font-face {
+    font-family: Futura-Light;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Light.ttf)
+}
+
+@font-face {
+    font-family: Futura-Demi;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Demi.ttf)
+}
+
+@font-face {
+    font-family: Futura-Cond-Bold;
+    src: url(../fonts/Futura-Round-Font/Futura\ Round\ Cond\ Bold.ttf)
+}
+
+/* -------------------------------------------------------------- */
+/*Lemon Milk*/
+@font-face {
+    font-family: Lemon_Milk;
+    src: url(../fonts/lemon_milk/LemonMilk.otf)
+}
+
+@font-face {
+    font-family: Lemon_Bold;
+    src: url(../fonts/lemon_milk/LemonMilkbold.otf)
+}

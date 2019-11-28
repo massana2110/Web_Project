@@ -1,0 +1,43 @@
+extends ../layouts/layout_installations
+
+block content
+    include ../navbar.pug
+
+    section#instalaciones
+        .container
+            include ../partials/messages.pug
+            h1.text-center.mt-4 Mis Habitaciones
+            .row 
+                each room in rooms   
+                    .col-12.col-md-3.mb-2
+                        .card.h-100
+                            h2(class="card-header text-center")= room.correlative 
+                            .card-body
+                                strong Tipo de habitacion: 
+                                    span= room.typeRoom
+                                <br>
+                                strong Costo: 
+                                    span= room.cost 
+                                <br>
+                                strong Disponible:
+                                    if room.isAvailable
+                                        p SI
+                                    else
+                                        p NO
+                            .card-footer
+                                form.form-inline(action='/admin/instalaciones/delete/' + room.id + "?_method=DELETE" method="POST")
+                                    input(type="hidden", name='_method', value='DELETE')
+                                    button(
+                                        class="btn btn-danger btn-sm mr-3"
+                                        type= "submit"
+                                    ) Eliminar
+                                    a(href='/admin/instalaciones/modify/'+room.id)
+                                        button(
+                                            class="btn btn-primary btn-sm"
+                                            type= "button"
+                                        ) Modificar 
+                        
+
+    include ../footer.pug                 
+
+

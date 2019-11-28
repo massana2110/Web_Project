@@ -1,0 +1,108 @@
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Futura-Round;
+}
+
+
+.container-fluid{
+    background-image: url(../images/profile.jpg) !important;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    
+    
+}
+.container-fluid .mx-auto {
+    display: block;
+    width: 125px;
+    height: 100px;
+}
+
+
+h1 {
+    font-family: Lemon_Milk;
+    color: rgba(255, 255, 255, 0.801);
+    letter-spacing: 6px;
+    
+}
+
+
+.btn{
+    margin-top: 1em;
+}
+
+.user-container{
+    padding: 50px 40px;
+    border-radius: 40px;
+    margin-top: 15vh;
+    box-shadow: -1px 4px 26px 11px rgba(6, 110, 245, 0.473);
+    background-color: rgba(190, 53, 99, 0.788);
+    font-family: Futura-Demi;
+    color: #ffffff;
+    margin-bottom: 2px;
+    font-size: 25px;
+}
+.reservas-container{
+    padding: 30px 40px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    margin-top: 15vh;
+    box-shadow: -1px 4px 26px 11px rgba(6, 110, 245, 0.473);
+    background-color: rgba(134, 31, 65, 0.788);
+}
+
+
+label{
+    font-family: Futura-Demi;
+    color: #00012f;
+}
+
+a{
+    font-family: Futura-Demi;
+}
+/* ----- PAQUETES ------*/
+
+#reservation .reservas-containerr .row .col h2 {
+    color: #ffffffc7;
+    font-family: Lemon_Milk;
+}
+#reservation .reservas-container .row .card {
+    border: none;
+    
+}
+
+#reservation .reservas-container .row .card .card-header{
+    background-color: rgb(88, 130, 207);
+    font-family: Lemon_Milk;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.5em;
+    padding: 0.6em 0;
+}
+
+#reservation .reservas-container .row .card .card-body .card-title {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    padding-top: 0.35em;
+}
+
+#reservation .reservas-container .row .card .card-body p{
+    font-family: Futura-Round;
+    text-align: justify;
+}
+
+
+@media screen and (max-width: 767px ){
+    .form-container{
+        border: 0px solid #ffffff;
+        padding: 30px 40px;
+        margin-top: 10vh;
+        box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
+    } 
+}
+
+  
