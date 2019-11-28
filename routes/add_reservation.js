@@ -12,12 +12,14 @@ function isAuthenticated(req, res, next) {
     res.redirect('/users/login');
 };
 
+
 /*GET home page */
 router.get('/reservaciones', isAuthenticated, async(req,res) =>{
-    Room.find(function(err,rooms, isAvailable){
-        res.render('add_reservation', { title: 'Reservacion' , rooms: rooms, isAvailable});
+      await Room.find(function(err,rooms){
+        res.render('add_reservation', { title: 'Reservacion' , rooms: rooms});
     })
-})
+});
+
 
 router.post('/reservaciones',async (req,res,next)=>{
     const {phone, email, arrive_date, departure_date, room, package} = req.body;
@@ -40,10 +42,13 @@ router.post('/reservaciones',async (req,res,next)=>{
         const newReservation = new Reservation({phone, email, arrive_date,departure_date,room,package});
         newReservation.user = req.user.id;
         await newReservation.save();
-        req.flash('success_msg', '¡Reservación añadida con exito! Puede ver sus reservas en la pestaña de su perfil.')
+        req.flash('success_msg', '¡Reservación añadida con exito! Puede ver sus reservas en la pestaña de su perfil.')      
         res.redirect('/reservaciones');
     } 
 
+    
 })
 
+
+     
 module.exports = router;
