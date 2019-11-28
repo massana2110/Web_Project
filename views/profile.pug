@@ -33,11 +33,11 @@ block content
                             .card.h-100
                                 h3.card-header.text-center.text-uppercase Paquete #{reserva.package}
                                 .card-body
-                                    p.card-text.text-uppercase  Entrada: 
+                                    p.card-text.text-uppercase  Fecha de entrada: 
                                       em #{reserva.arrive_date}
                                     p.card-text.text-uppercase  Fecha de salida:  
                                       em #{reserva.departure_date}
-                                    p.card-text.text-uppercase  Habitacion:  
+                                    p.card-text.text-uppercase  Habitacion reservada:  
                                       em #{reserva.room}
                                     form(action='/reservaciones/delete/' + reserva.id + "?_method=DELETE" method="POST")
                                      .form-group
