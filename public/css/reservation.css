@@ -1,109 +1,117 @@
 @import url(fonts.css);
 
-*, ::before, ::after {
-    margin: 0;
-    padding: 0;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    overflow-x: hidden;
-    background-color: rgb(175, 198, 241);
+  overflow-x: hidden;
+  background-color: rgb(175, 198, 241);
+  box-sizing: border-box;
 }
 
-#form-container{
-   padding: 0.5em 1em;
-   margin-top: 2.5vh;
-
-   display: flex;
-
-   flex-direction: column;
-   justify-items: center; 
+#form-container {
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  box-sizing: border-box;
+  height: calc(100vh - 133px);
 }
 
-#reservation-header{
-    font-size: 2em;
-    font-family: Lemon_Milk;
-    text-align: center;
+#reservation-header {
+  font-size: 2em;
+  font-family: Lemon_Milk;
+  text-align: center;
+  padding-top: 15px;
 }
 
-h2{ 
+h2 {
   text-align: center;
   margin-bottom: 1em;
 }
 
-h4{
-    text-align: center;
+h4 {
+  text-align: center;
 }
-.form-control{
-    border-radius: 0.25rem;
-    border: 1px solid black;
-    padding:0.2em;
-    margin: 0.2em;
-    border-color: black;
-}
-
-#input-dates{
- display: flex;
-
- flex-flow: row nowrap;
+.form-control {
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  padding: 0.2em;
+  margin: 0.2em;
+  border-color: black;
 }
 
-#confirmation{
- margin-top: 1em;
+#input-dates {
+  display: flex;
+
+  flex-flow: row nowrap;
 }
 
-label{
-    margin-top: 0.5em;
-    font-size: 1.3em;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
+#confirmation {
+  margin-top: 1em;
 }
 
-#submit-btn{
-    background-color: rgb(57, 105, 240);
-    color: whitesmoke;
-    border-color: rgb(57,105, 240);
-    font-family: Futura-Demi;
+label {
+  margin-top: 0.5em;
+  font-size: 1.3em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
 }
 
-.btn:hover{
-    opacity: 0.9;
-    text-decoration: none;
+#submit-btn {
+  background-color: rgb(57, 105, 240);
+  color: whitesmoke;
+  border-color: rgb(57, 105, 240);
+  font-family: Futura-Demi;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  max-height: 700px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
 
-  .container-card{
-    padding: 2em 3em;
-    background-color: whitesmoke;
-  }
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
 
-@media screen and (max-width: 767px){
-    
-    .form-container {
-       width: 100%;
-       height: auto;
+.container-card {
+  padding: 2em 3em;
+  background-color: whitesmoke;
+}
+
+@media screen and (max-width: 576px) {
+    #form-container {
+        height: calc(100vh - 148px);
     }
+}
 
-    #input-names{
-        display: flex;
-    
-        flex-flow: row wrap;
-    }
-    
-    #input-dates{
-     display: flex;
-    
-     flex-flow: row wrap;
-    }
-    
+@media screen and (max-width: 767px) {
+  .form-container {
+    width: 100%;
+    height: auto;
+  }
 
-   }
+  #input-names {
+    display: flex;
+
+    flex-flow: row wrap;
+  }
+
+  #input-dates {
+    display: flex;
+
+    flex-flow: row wrap;
+  }
+}

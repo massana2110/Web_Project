@@ -1,40 +1,38 @@
 extends layouts/layout_reservation
 
 block content
- include navbar.pug
- section#form-container
-  h1#reservation-header ¡Haz tu reservación ya!
-  h2 ¡Empecemos!
-  .col-md-8.mx-auto
-   div.card.container-card
-    include partials/messages.pug
-    include partials/errors_alerts.pug
-    form(action="/reservaciones" method="POST")
-     h4 ¡Bienvenido, #{user.name} #{user.lastname}!
-     label(for="phone") Ingrese su numero de telefono:
-     input(type="phone", placeholder="2567-6789", class="form-control" name="phone" required)
-     label(for="email") Ingrese su e-mail
-     input(type="text", placeholder="example@gmail.com", class="form-control" name="email" required)
-     label(for="date") Indique la fecha de llegada y salida de su reserva.
-     div#input-dates
-      input(type="date", class="form-control" name="arrive_date" min="2019-11-22" max="2019-12-31" required)#arrival-date
-      input(type="date", class="form-control" name="departure_date" min="2019-11-22" max="2019-12-31" required)#departure-date
-     label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
-     div#select-room
-      select(name="room" class="form-control" size required)
-       if rooms 
-        each room in rooms
-         if room.isAvailable
-            option #{room.correlative}, #{room.typeRoom} 
-     label(for="choose-package") Escoja un paquete para su reserva.
-     div#select-package
-      select(name="package", class="form-control" required)
-       option(value="Un sueño") Paquete "Un sueño" 
-       option(value="El cielo") Paquete "Prueba el cielo"
-       option(value="El cielo en la tierra") Paquete "Prueba el cielo en la tierra"
-     div#confirmation 
-      button(type: submit, class="form-control btn btn-primary ")#submit-btn Confirmar reserva
+  include navbar.pug
+  section#form-container
+    h1#reservation-header ¡Haz tu reservación ya!
+    h2 ¡Empecemos!
+    .col-md-8.col-lg-6.mx-auto
+      div.card.container-card
+        include partials/messages.pug
+        include partials/errors_alerts.pug
+        form(action="/reservaciones" method="POST")
+          h4 ¡Bienvenido, #{user.name} #{user.lastname}!
+          label(for="phone") Ingrese su numero de telefono:
+          input(type="phone", placeholder="2567-6789", class="form-control" name="phone" required)
+          label(for="email") Ingrese su e-mail
+          input(type="text", placeholder="example@gmail.com", class="form-control" name="email" required)
+          label(for="date") Indique la fecha de llegada y salida de su reserva.
+          div#input-dates
+            input(type="date", class="form-control" name="arrive_date" min="2019-11-22" max="2019-12-31" required)#arrival-date
+            input(type="date", class="form-control" name="departure_date" min="2019-11-22" max="2019-12-31" required)#departure-date
+          label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
+          div#select-room
+            select(name="room" class="form-control" size required)
+            if rooms 
+              each room in rooms
+                if room.isAvailable
+                  option #{room.correlative}, #{room.typeRoom} 
+          label(for="choose-package") Escoja un paquete para su reserva.
+          div#select-package
+            select(name="package", class="form-control" required)
+              option(value="Un sueño") Paquete "Un sueño" 
+              option(value="El cielo") Paquete "Prueba el cielo"
+              option(value="El cielo en la tierra") Paquete "Prueba el cielo en la tierra"
+          div#confirmation 
+            button(type: submit, class="form-control btn btn-primary ")#submit-btn Confirmar reserva
 
-   
-   
-   include footer.pug     
+  include footer.pug     
