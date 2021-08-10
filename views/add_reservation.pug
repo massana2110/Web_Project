@@ -17,15 +17,16 @@ block content
           input(type="text", placeholder="example@gmail.com", class="form-control" name="email" required)
           label(for="date") Indique la fecha de llegada y salida de su reserva.
           div#input-dates
-            input(type="date", class="form-control" name="arrive_date" min="2019-11-22" max="2019-12-31" required)#arrival-date
-            input(type="date", class="form-control" name="departure_date" min="2019-11-22" max="2019-12-31" required)#departure-date
+            input(type="date", class="form-control" name="arrive_date" min=`${Date.now()}`  max="2025-12-31" required)#arrival-date
+            input(type="date", class="form-control" name="departure_date" min=`${Date.now()}` max="2025-12-31" required)#departure-date
           label(for="room-reservation") Escoja una o varias habitaciones de las disponibles para su reserva.
           div#select-room
             select(name="room" class="form-control" size required)
-            if rooms 
-              each room in rooms
-                if room.isAvailable
-                  option #{room.correlative}, #{room.typeRoom} 
+               if rooms 
+               each room in rooms
+                  if room.isAvailable
+                     option #{room.correlative}, #{room.typeRoom} 
+
           label(for="choose-package") Escoja un paquete para su reserva.
           div#select-package
             select(name="package", class="form-control" required)
